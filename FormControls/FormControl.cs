@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace SEPFramework.FormControls
 {
-    public class FormControl : Panel
+    public class FormControl
     {
         private Label _label;
         private TextBox _textBox;
@@ -25,6 +25,18 @@ namespace SEPFramework.FormControls
             set { this._label.Text = value; }
         }
 
+        public Label ControlLabel
+        {
+            get { return this._label; }
+            set { this._label = value; }
+        }
+
+        public TextBox ControlTextBox
+        {
+            get { return this._textBox; }
+            set { this._textBox = value; }
+        }
+
         public FormControl()
         {
             this._label = new();
@@ -37,14 +49,20 @@ namespace SEPFramework.FormControls
             this._textBox.AcceptsReturn = true;
             this._textBox.AcceptsTab = true;
 
-            this.Controls.AddRange(new Control[] { this._textBox, this._label });
         }
 
-        public FormControl(string name, string labelText, string value) : this()
+        public FormControl(string labelText, string value) : this()
         {
-            this.Name = name;
             this._label.Text = labelText;
             this._textBox.Text = value;
+        }
+
+        public static List<FormControl> CreateFormControlList(Dictionary<string,string> labelValuePairs)
+        {
+            List<FormControl> list = new();
+            foreach(string label in labelValuePairs.Keys)
+                list.Add(new(label, labelValuePairs[label]));
+            return list;
         }
     }
 }

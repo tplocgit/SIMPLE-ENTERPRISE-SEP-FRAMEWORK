@@ -26,7 +26,7 @@ namespace SEPFramework.Forms
         private static readonly float t_defaultTitleFontSize = 20;
         private static readonly int t_defaultMargin = 10;
         private static readonly float t_defaultDockSideWidthPercent = 0.2f;
-        private static readonly Size t_minSize = new(width: 500, height: 500);
+        private static readonly Size t_minSize = new(width: 500, height: 300);
         private string _titleText;
         private Type _type;
 
@@ -88,7 +88,6 @@ namespace SEPFramework.Forms
         private void SetUpPanelMain()
         {
             this._panelMain.Dock = DockStyle.Fill;
-            this._panelMain.Padding = new Padding(t_defaultMargin / 2);
         }
 
         //private void SEPForm_Load(object sender, EventArgs e)

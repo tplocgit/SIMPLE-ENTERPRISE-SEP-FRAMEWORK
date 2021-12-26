@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SEPFramework.DataGridViews;
 using SEPFramework.Buttons;
+using SEPFramework.FormControls;
 
 namespace SEPFramework.Factories
 {
@@ -18,6 +19,7 @@ namespace SEPFramework.Factories
             panel.Name = panelName;
             panel.FlowDirection = flowDirection;
             panel.Controls.AddRange(controls);
+            panel.MinimumSize = new(160, 0);
             return panel;
         }
 
@@ -44,7 +46,6 @@ namespace SEPFramework.Factories
 
         public FlowLayoutPanel CreateFLPanelDockRightButtons(string panelName, List<SEPButton> buttons)
         {
-
             return CreateFLPanelControls(panelName, FlowDirection.TopDown, DockStyle.Right, buttons.ToArray());
         }
 
@@ -60,7 +61,7 @@ namespace SEPFramework.Factories
 
         public TableLayoutPanel CreateTLPabelDockFillControls(string panelName, Control[,] controls)
         {
-            TableLayoutPanel panel = new() { Name = panelName, Dock = DockStyle.Fill };
+            TableLayoutPanel panel = new() { Name = panelName, Dock = DockStyle.Fill, Padding = new(0, 2, 0, 0) };
             panel.ColumnCount = controls.GetLength(1);
             panel.RowCount = controls.GetLength(0);
             for(int row = 0; row < panel.RowCount; ++row)
@@ -69,6 +70,40 @@ namespace SEPFramework.Factories
                     panel.Controls.Add(controls[row, col], col, row);
                 }
             panel.Controls.Add(new Control());
+            return panel;
+        }
+
+        public TableLayoutPanel CreateTLPabelDockFillFormControls(string panelName, List<FormControl> controls)
+        {
+            TableLayoutPanel panel = new() { Name = panelName, Dock = DockStyle.Fill, Padding = new(0, 2, 0, 0) };
+            panel.RowCount = controls.Count;
+            panel.ColumnCount = 2;
+
+            for(int i = 0; i < controls.Count; ++i)
+            {
+                panel.Controls.Add(controls[i].ControlLabel, 0, i);
+                panel.Controls.Add(controls[i].ControlTextBox, 1, i);
+            }
+
+            panel.Controls.Add(new Control());
+            return panel;
+        }
+
+        public TableLayoutPanel CreateTLPabelDockFillFormControls(string panelName, Dictionary<string, string> fields)
+        {
+            TableLayoutPanel panel = new() { Name = panelName, Dock = DockStyle.Fill, Padding = new(0, 2, 0, 0) };
+            panel.RowCount = fields.Keys.Count;
+            panel.ColumnCount = 2;
+
+            for (int i = 0; i < fields.Keys.Count; ++i)
+            {
+                string key = fields.Keys.ElementAt(i);
+                FormControl fc = new(key, fields[key]);
+                panel.Controls.Add(fc.ControlLabel, 0, i);
+                panel.Controls.Add(fc.ControlTextBox, 1, i);
+            }
+
+            panel.Controls.Add(new Control() { Width = 0 });
             return panel;
         }
     }

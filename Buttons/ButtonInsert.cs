@@ -37,9 +37,9 @@ namespace SEPFramework.Buttons
 
             Control[,] controls = new Control[,]
 {
-                { new Label { Text = "1", Dock = DockStyle.Fill, TextAlign = System.Drawing.ContentAlignment.MiddleCenter }, new TextBox { Dock = DockStyle.Fill } },
-                { new Label { Text = "1", Dock = DockStyle.Fill, TextAlign = System.Drawing.ContentAlignment.MiddleCenter }, new TextBox { Dock = DockStyle.Fill } },
-                { new Label { Text = "1", Dock = DockStyle.Fill, TextAlign = System.Drawing.ContentAlignment.MiddleCenter }, new TextBox { Dock = DockStyle.Fill } }
+                { new Label { Text = "aaaaaaaa", Dock = DockStyle.Fill, TextAlign = System.Drawing.ContentAlignment.MiddleLeft }, new TextBox { Dock = DockStyle.Fill } },
+                { new Label { Text = "bbbb", Dock = DockStyle.Fill, TextAlign = System.Drawing.ContentAlignment.MiddleLeft }, new TextBox { Dock = DockStyle.Fill } },
+                { new Label { Text = "ccccccccc", Dock = DockStyle.Fill, TextAlign = System.Drawing.ContentAlignment.MiddleLeft }, new TextBox { Dock = DockStyle.Fill } }
             };
             FactoryPanel fp = new();
             Panel panelButtons = fp.CreateFLPanelDockRightButtons("panelButtons", buttons);

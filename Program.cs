@@ -54,14 +54,14 @@ namespace SEPFramework
             SEPDataGridView dataGridView = new(data);
 
             FactoryPanel factoryPanel = new FactoryPanel();
-
+             
             Panel panelGridView = factoryPanel.CreatePanelDataGridView("panelGridView", data);
             Panel panelButtons = factoryPanel.CreateFLPanelDockRightButtons("panelButtons", buttons);
 
 
 
-
-            Application.Run(new SEPForm("DataView", "DataView", SEPForm.Type.Main, "DataView", SEPForm.SEPFormDefaultSize, panelButtons, panelGridView));
+            Application.Run(new FactoryFormVertical().CreateLoginForm("loginForm"));
+            //Application.Run(new SEPForm("DataView", "DataView", SEPForm.Type.Main, "DataView", SEPForm.SEPFormDefaultSize, panelButtons, panelGridView));
         }
     }
 }
