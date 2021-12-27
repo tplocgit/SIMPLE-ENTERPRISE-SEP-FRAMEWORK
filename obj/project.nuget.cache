@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "oDiThQEhxtvXO0VRmkrjSKlVPsADQOz8XqycByLGfJBk96wUfaRdfNvIgYglqN2Bqm5l1MusysNKn0HAtCyMDw==",
+  "dgSpecHash": "gO0ekgNCnvoQcditjM5Lh7CArYTmEAH73QL3WyTYRlyQuCvxuAYT3qUNDX3krfxzpiQYgKDzY+54G3tSDeWH5Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TGDD\\Desktop\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\SEPFramework.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\ProjectDirectory\\C#\\git project\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\SEPFramework.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
   "logs": []
 }

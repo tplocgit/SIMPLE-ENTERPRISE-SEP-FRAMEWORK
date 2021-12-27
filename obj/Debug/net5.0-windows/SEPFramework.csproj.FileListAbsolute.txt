@@ -26,3 +26,13 @@ C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\S
 C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.dll
 C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\ref\SEPFramework.dll
 C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.pdb
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.csproj.AssemblyReference.cache
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.Forms.SEPForm.resources
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.csproj.GenerateResource.cache
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.AssemblyInfoInputs.cache
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.AssemblyInfo.cs
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.csproj.CoreCompileInputs.cache
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.dll
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\ref\SEPFramework.dll
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.pdb
