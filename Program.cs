@@ -60,7 +60,7 @@ namespace SEPFramework
             IoC_Container.IoCContainer.SetDependency<FactoryForm, FactoryFormVertical>();
 
             
-            Application.Run(IoC_Container.IoCContainer.GetDependency<FactoryForm>().CreateLoginForm("Login form");
+            Application.Run(IoC_Container.IoCContainer.GetDependency<FactoryForm>().CreateLoginForm("Login form"));
 
             //Application.Run(new FactoryFormVertical().CreateLoginForm("loginForm"));
             //Application.Run(new SEPForm("DataView", "DataView", SEPForm.Type.Main, "DataView", SEPForm.SEPFormDefaultSize, panelButtons, panelGridView));

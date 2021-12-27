@@ -21,7 +21,11 @@ namespace TestDatabase
             singletonDatabase.connString = $@"Data Source=.;Initial Catalog=master;Integrated Security=True";
             //singletonDatabase.connString = $@"Data Source=.;Integrated Security=True";
             List<string> tables = singletonDatabase.GetAllTablesName();
-            SqlServerDAO sqlServerDAO = new SqlServerDAO(singletonDatabase.connString);
+            foreach (string item in tables)
+            {
+                Console.WriteLine(item);
+            }
+            //SqlServerDAO sqlServerDAO = new SqlServerDAO(singletonDatabase.connString);
             /*Dictionary<string, object> fields = new Dictionary<string, object>();
             fields.Add("BienSo", "123-123");
             fields.Add("HieuXe", "Yamahehehe");
@@ -39,11 +43,11 @@ namespace TestDatabase
             //    Console.WriteLine();
             // }
 
-            List<string> data = sqlServerDAO.GetAllFieldsName("QLHD_18127078");
-            foreach(string item in data)
-            {
-                Console.WriteLine(item);
-            }
+            //List<string> data = sqlServerDAO.GetAllFieldsName("QLHD_18127078");
+            //foreach(string item in data)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
 
             //Console.WriteLine(sqlServerDAO.GetPrimaryKey("GV_DT"));
