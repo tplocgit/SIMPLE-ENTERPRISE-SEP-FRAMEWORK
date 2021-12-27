@@ -7,3 +7,10 @@ C:\Users\TGDD\Desktop\TestWinForm\TestDatabase\obj\Debug\TestDatabase.csproj.Ass
 C:\Users\TGDD\Desktop\TestWinForm\TestDatabase\obj\Debug\TestDatabase.csproj.CoreCompileInputs.cache
 C:\Users\TGDD\Desktop\TestWinForm\TestDatabase\obj\Debug\TestDatabase.exe
 C:\Users\TGDD\Desktop\TestWinForm\TestDatabase\obj\Debug\TestDatabase.pdb
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\bin\Debug\TestDatabase.exe.config
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\bin\Debug\TestDatabase.exe
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\bin\Debug\TestDatabase.pdb
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\obj\Debug\TestDatabase.csproj.AssemblyReference.cache
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\obj\Debug\TestDatabase.csproj.CoreCompileInputs.cache
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\obj\Debug\TestDatabase.exe
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\obj\Debug\TestDatabase.pdb

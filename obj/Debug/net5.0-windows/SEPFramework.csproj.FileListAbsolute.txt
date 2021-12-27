@@ -16,3 +16,13 @@ D:\HCMUS-EDU\src\SEPFramework\obj\Debug\net5.0-windows\SEPFramework.dll
 D:\HCMUS-EDU\src\SEPFramework\obj\Debug\net5.0-windows\ref\SEPFramework.dll
 D:\HCMUS-EDU\src\SEPFramework\obj\Debug\net5.0-windows\SEPFramework.pdb
 D:\HCMUS-EDU\src\SEPFramework\obj\Debug\net5.0-windows\SEPFramework.genruntimeconfig.cache
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.csproj.AssemblyReference.cache
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.Forms.SEPForm.resources
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.csproj.GenerateResource.cache
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.AssemblyInfoInputs.cache
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.AssemblyInfo.cs
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.csproj.CoreCompileInputs.cache
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.dll
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\ref\SEPFramework.dll
+C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\obj\Debug\net5.0-windows\SEPFramework.pdb

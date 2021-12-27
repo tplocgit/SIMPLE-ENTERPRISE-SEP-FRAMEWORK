@@ -105,6 +105,21 @@ namespace TestDatabase.DB
             return dataTable.Rows[0][0].ToString();
         }
 
+        public override List<string> GetAllFieldsName(string tableName)
+        {
+            string sql = $"select column_name from information_schema.columns where table_name = N'{tableName}'";
+            DataTable dataTable = databaseProcessor.GetAllData(sql);
+            List<string> fieldsName = new List<string>();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                foreach (var item in row.ItemArray)
+                {
+                    fieldsName.Add(item.ToString());
+                }
+            }
+            return fieldsName;
+        }
+
         public override bool Insert(Dictionary<string, object> data, string tableName)
         {
             string sql = "insert into " + tableName + " values(";

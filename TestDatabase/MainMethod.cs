@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,12 +23,29 @@ namespace TestDatabase
             List<string> tables = singletonDatabase.GetAllTablesName();
 
             SqlServerDAO sqlServerDAO = new SqlServerDAO(singletonDatabase.connString);
-            Dictionary<string, object> fields = new Dictionary<string, object>();
-            /*fields.Add("BienSo", "123-123");
+            /*Dictionary<string, object> fields = new Dictionary<string, object>();
+            fields.Add("BienSo", "123-123");
             fields.Add("HieuXe", "Yamahehehe");
             fields.Add("SoCho", 10);*/
             //sqlServerDAO.Update(fields, "Xe");
             //sqlServerDAO.Insert(fields, "Xe");
+
+            DataTable dataTable = sqlServerDAO.GetAllFieldsAndData("Xe");
+            foreach (DataRow dataRow in dataTable.Rows)
+             {
+                 foreach (var item in dataRow.ItemArray)
+                 {
+                     Console.Write(item + "  -  ");
+                 }
+                Console.WriteLine();
+             }
+
+            List<string> data = sqlServerDAO.GetAllFieldsName("Xe");
+            foreach(string item in data)
+            {
+                Console.WriteLine(item);
+            }
+
 
             //Console.WriteLine(sqlServerDAO.GetPrimaryKey("GV_DT"));
 
