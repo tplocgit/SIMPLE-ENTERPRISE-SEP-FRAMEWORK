@@ -8,19 +8,19 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\TGDD\\.nuget\\packages\\": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TGDD\\Desktop\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\SEPFramework.csproj",
+      "projectUniqueName": "D:\\ProjectDirectory\\C#\\git project\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\SEPFramework.csproj",
       "projectName": "SEPFramework",
-      "projectPath": "C:\\Users\\TGDD\\Desktop\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\SEPFramework.csproj",
-      "packagesPath": "C:\\Users\\TGDD\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TGDD\\Desktop\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\obj\\",
+      "projectPath": "D:\\ProjectDirectory\\C#\\git project\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\SEPFramework.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "D:\\ProjectDirectory\\C#\\git project\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\TGDD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -55,6 +55,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.12, 5.0.12]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -63,7 +69,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

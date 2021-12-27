@@ -17,11 +17,10 @@ namespace TestDatabase
             List<string> list = databases.GetDatabaseList();
 
             SingletonDatabase singletonDatabase = SingletonDatabase.getInstance();
-            singletonDatabase.connString = $@"Data Source=.;Initial Catalog=QLDuLich;Integrated Security=True";
-            //singletonDatabase.connString = $@"Data Source=.;Initial Catalog=master;Integrated Security=True";
+            //singletonDatabase.connString = $@"Data Source=.;Initial Catalog=QLDuLich;Integrated Security=True";
+            singletonDatabase.connString = $@"Data Source=.;Initial Catalog=master;Integrated Security=True";
             //singletonDatabase.connString = $@"Data Source=.;Integrated Security=True";
             List<string> tables = singletonDatabase.GetAllTablesName();
-
             SqlServerDAO sqlServerDAO = new SqlServerDAO(singletonDatabase.connString);
             /*Dictionary<string, object> fields = new Dictionary<string, object>();
             fields.Add("BienSo", "123-123");
@@ -30,17 +29,17 @@ namespace TestDatabase
             //sqlServerDAO.Update(fields, "Xe");
             //sqlServerDAO.Insert(fields, "Xe");
 
-            DataTable dataTable = sqlServerDAO.GetAllFieldsAndData("Xe");
-            foreach (DataRow dataRow in dataTable.Rows)
-             {
-                 foreach (var item in dataRow.ItemArray)
-                 {
-                     Console.Write(item + "  -  ");
-                 }
-                Console.WriteLine();
-             }
+            //DataTable dataTable = sqlServerDAO.GetAllFieldsAndData("Xe");
+            //foreach (DataRow dataRow in dataTable.Rows)
+            // {
+            //     foreach (var item in dataRow.ItemArray)
+            //     {
+            //         Console.Write(item + "  -  ");
+            //     }
+            //    Console.WriteLine();
+            // }
 
-            List<string> data = sqlServerDAO.GetAllFieldsName("Xe");
+            List<string> data = sqlServerDAO.GetAllFieldsName("QLHD_18127078");
             foreach(string item in data)
             {
                 Console.WriteLine(item);

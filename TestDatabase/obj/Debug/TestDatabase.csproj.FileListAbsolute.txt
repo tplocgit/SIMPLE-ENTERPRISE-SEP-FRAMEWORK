@@ -14,3 +14,10 @@ C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\obj\Debug\Tes
 C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\obj\Debug\TestDatabase.csproj.CoreCompileInputs.cache
 C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\obj\Debug\TestDatabase.exe
 C:\Users\TGDD\Desktop\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\obj\Debug\TestDatabase.pdb
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\bin\Debug\TestDatabase.exe.config
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\bin\Debug\TestDatabase.exe
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\bin\Debug\TestDatabase.pdb
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\obj\Debug\TestDatabase.csproj.AssemblyReference.cache
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\obj\Debug\TestDatabase.csproj.CoreCompileInputs.cache
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\obj\Debug\TestDatabase.exe
+D:\ProjectDirectory\C#\git project\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\TestDatabase\obj\Debug\TestDatabase.pdb
