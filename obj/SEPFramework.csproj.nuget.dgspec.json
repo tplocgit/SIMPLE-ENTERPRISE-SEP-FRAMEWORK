@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TGDD\\Desktop\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\SEPFramework.csproj": {}
+    "C:\\Users\\TGDD\\Desktop\\New folder (4)\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\SEPFramework.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TGDD\\Desktop\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\SEPFramework.csproj": {
+    "C:\\Users\\TGDD\\Desktop\\New folder (4)\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\SEPFramework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TGDD\\Desktop\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\SEPFramework.csproj",
+        "projectUniqueName": "C:\\Users\\TGDD\\Desktop\\New folder (4)\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\SEPFramework.csproj",
         "projectName": "SEPFramework",
-        "projectPath": "C:\\Users\\TGDD\\Desktop\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\SEPFramework.csproj",
+        "projectPath": "C:\\Users\\TGDD\\Desktop\\New folder (4)\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\SEPFramework.csproj",
         "packagesPath": "C:\\Users\\TGDD\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TGDD\\Desktop\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\obj\\",
+        "outputPath": "C:\\Users\\TGDD\\Desktop\\New folder (4)\\SIMPLE-ENTERPRISE-SEP-FRAMEWORK\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TGDD\\AppData\\Roaming\\NuGet\\NuGet.Config",
