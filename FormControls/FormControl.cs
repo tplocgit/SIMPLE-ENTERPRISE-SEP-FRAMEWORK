@@ -37,6 +37,11 @@ namespace SEPFramework.FormControls
             set { this._textBox = value; }
         }
 
+        public void SetPasswordChar(char c)
+        {
+            this._textBox.PasswordChar = c;
+        }
+
         public FormControl()
         {
             this._label = new();
@@ -47,14 +52,18 @@ namespace SEPFramework.FormControls
             this._textBox.Dock = DockStyle.Fill;
             this._textBox.Multiline = false;
             this._textBox.AcceptsReturn = true;
-            this._textBox.AcceptsTab = true;
-
+            this._textBox.AcceptsTab = false;
         }
 
         public FormControl(string labelText, string value) : this()
         {
             this._label.Text = labelText;
             this._textBox.Text = value;
+        }
+
+        public FormControl(string labelText, string value, char pwdChar) : this(labelText, value)
+        {
+            this._textBox.PasswordChar = pwdChar;
         }
 
         public static List<FormControl> CreateFormControlList(Dictionary<string,string> labelValuePairs)
