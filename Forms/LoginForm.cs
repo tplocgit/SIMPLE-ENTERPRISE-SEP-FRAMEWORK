@@ -55,7 +55,7 @@ namespace SEPFramework.Forms
                 //Debug.WriteLine("");
                 SqlServerDAO sqlServerDAO = new SqlServerDAO(singletonDatabase.connString);
                 DataTable dataTable = sqlServerDAO.GetAllData(tables[0]);
-                DatagridviewForm dataGVF = new DatagridviewForm(tables[0], "label", "title", dataTable);
+                DataViewForm dataGVF = new DataViewForm(tables[0], "label", "title", dataTable);
                 dataGVF.Show();
                 //foreach (DataRow dataRow in dataTable.Rows)
                 //{
