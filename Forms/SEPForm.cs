@@ -31,12 +31,12 @@ namespace SEPFramework.Forms
         private Type _type;
 
         // This panel contains main content in the center of form
-        private Panel _panelMain;
+        protected Panel _panelMain;
 
-        private Label _labelTitle = new();
+        protected Label _labelTitle = new();
 
         // This panel contains buttons
-        private Panel _panelButtons = new();
+        protected Panel _panelButtons = new();
 
         public SEPForm()
         {
@@ -44,20 +44,23 @@ namespace SEPFramework.Forms
             MinimumSize = t_minSize;
         }
 
-        public SEPForm(string name, string titleText, Type type, string text,
-            Size size, Panel flPanelButtons, Panel panelContent) : this()
+        public SEPForm(string name, string titleText, Type type, string text, Size size) : this()
         {
             _type = type;
-            _panelButtons = flPanelButtons;
             _titleText = titleText;
-            _panelMain = panelContent;
             Text = text;
             Size = size;
             Name = name;
+        }
+        public SEPForm(string name, string titleText, Type type, string text,
+            Size size, Panel flPanelButtons, Panel panelContent) : this(name, titleText, type, text, size)
+        {
+            _panelButtons = flPanelButtons;
+            _panelMain = panelContent;
             SetUpForm();
         }
 
-        private void SetUpForm()
+        protected void SetUpForm()
         {
             SetUpTitle();
             SetUpPanelMain();

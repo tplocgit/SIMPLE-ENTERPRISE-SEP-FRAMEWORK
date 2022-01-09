@@ -9,6 +9,11 @@ using SEPFramework.Factories;
 using SEPFramework.DataGridViews;
 using SEPFramework.FormControls;
 using SEPFramework.DI;
+using SEPFramework.DAO.DB;
+using SEPFramework.DAO;
+using SEPFramework.DAO.MemberShip;
+using System.Data;
+
 namespace SEPFramework
 {
     static class Program
@@ -19,11 +24,11 @@ namespace SEPFramework
         [STAThread]
         static void Main()
         {
-            Application.SetHighDpiMode(HighDpiMode.SystemAware);
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            //Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
 
-            List<SEPButton> buttons = new();
+            /*List<SEPButton> buttons = new();
 
             FactoryButton factory = new FactoryButtonInsert();
             buttons.Add(factory.CreateButton("btnInsert"));
@@ -49,23 +54,73 @@ namespace SEPFramework
                     ["col4"] = "cell9",
                     ["col5"] = "cell0",
                 }
-            };
+            };*/
 
-            SEPDataGridView dataGridView = new(data);
+            //SEPDataGridView dataGridView = new(data);
 
-            IoCContainer.SetDependency<FactoryPanel, FactoryPanel>();
+            //IoCContainer.SetDependency<FactoryPanel, FactoryPanel>();
 
-            Panel panelGridView = IoCContainer.GetDependency<FactoryPanel>().CreatePanelDataGridView("panelGridView", data);
-            Panel panelButtons = IoCContainer.GetDependency<FactoryPanel>().CreateFLPanelDockRightButtons("panelButtons", buttons);
+            //Panel panelGridView = IoCContainer.GetDependency<FactoryPanel>().CreatePanelDataGridView("panelGridView", data);
+            //Panel panelButtons = IoCContainer.GetDependency<FactoryPanel>().CreateFLPanelDockRightButtons("panelButtons", buttons);
 
 
 
-            Application.Run(new SEPForm("DataView", "DataView", SEPForm.Type.Main, "DataView", SEPForm.SEPFormDefaultSize, panelButtons, panelGridView));
             IoCContainer.SetDependency<FactoryFormVertical, FactoryFormVertical>();
 
 
             Application.Run(IoCContainer.GetDependency<FactoryFormVertical>().CreateLoginForm("Login form"));
 
+            /*
+            //-----------------------------Get list of available database on this PC--------------------------
+            Database databases = new Database();
+            List<string> list = databases.GetDatabaseList();
+            foreach (var i in list)
+            {
+                Console.WriteLine(i);
+            }
+
+
+            //-----------------------------Connect to a selected database---------------------------
+            string selected_database = list[list.Count - 1];
+            SingletonDatabase singletonDatabase = SingletonDatabase.getInstance();
+            singletonDatabase.connString = $@"Data Source=.;Initial Catalog={selected_database};Integrated Security=SSPI";
+
+            //-----------------------------Get list of tables in selected database-------------------------------------------
+            Console.WriteLine($"------------------- {selected_database}  database table ------------------------"); 
+            List<string> tables = singletonDatabase.GetAllTablesName();
+            foreach (var i in tables)
+            {
+                Console.WriteLine(i);
+            }
+            */
+            /*
+            SqlServerDAO sqlServerDAO = new SqlServerDAO(singletonDatabase.connString);
+            
+
+            List<string> data = sqlServerDAO.GetAllFieldsName("OFFICER");
+            foreach (string item in data)
+            {
+                Console.Write(item+"\t");
+            }
+            Console.WriteLine();
+            DataTable dataTable = sqlServerDAO.GetAllData("OFFICER");
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                //int count = 0;
+                foreach (var item in dataRow.ItemArray)
+                {
+
+                    //Console.Write(item + $"-{count}-type:{item.GetType()}\t");
+                    //count++;
+                    if (item.GetType() == typeof(System.DBNull))
+                        Console.Write("<NULL>\t");
+                    else
+                        Console.Write(item + "\t");
+
+                }
+                Console.WriteLine();
+            }
+            */
         }
     }
 }
