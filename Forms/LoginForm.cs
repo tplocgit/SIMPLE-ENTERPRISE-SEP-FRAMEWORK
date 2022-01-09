@@ -54,7 +54,7 @@ namespace SEPFramework.Forms
                 //}
                 //Debug.WriteLine("");
                 
-                SEPForm dataGVF = new DataViewForm(tables[0], tables[0], tables[0], tables[0]);
+                SEPForm dataGVF = new DataViewForm(tables[1], tables[1], tables[1], tables[1]);
                 dataGVF.Show();
                 //foreach (DataRow dataRow in dataTable.Rows)
                 //{
@@ -126,6 +126,25 @@ namespace SEPFramework.Forms
                 MessageBox.Show("Register failed");
             }
             
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // LoginForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "LoginForm";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

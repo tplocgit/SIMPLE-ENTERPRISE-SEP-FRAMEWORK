@@ -97,6 +97,11 @@ namespace SEPFramework.Forms
             this._panelMain.Dock = DockStyle.Fill;
         }
 
+        private void SEPForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         //private void SEPForm_Load(object sender, EventArgs e)
         //{
 

@@ -38,6 +38,7 @@ namespace SEPFramework.Forms
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "SEPForm";
             this.Text = "Untitled";
+            this.Load += new System.EventHandler(this.SEPForm_Load);
             this.ResumeLayout(false);
 
         }

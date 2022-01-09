@@ -25,7 +25,8 @@ namespace SEPFramework.Forms
             SEPButton btnInsert = new("btnInsert", "Insert", (sender, agrs) =>
             {
                 Debug.WriteLine("Insert");
-                SEPForm insertForm = new RecordViewForm("Insert row", "Insert row", "Edit your new line to insert", RecordViewForm.SaveType.Insert, this._dataGridView.Rows[0]);
+                //SEPForm insertForm = new RecordViewForm("Insert row", "Insert row", "Edit your new line to insert", RecordViewForm.SaveType.Insert, this._dataGridView.Rows[0]);
+                SEPForm insertForm = new RecordViewForm(name, tableLabel, tableTitle, RecordViewForm.SaveType.Insert, this._dataGridView.Rows[0]);
                 insertForm.Show();
             });
 
@@ -63,6 +64,25 @@ namespace SEPFramework.Forms
             DataTable dataSource = _sqlServerDao.GetAllData(this._dbTableRef);
             this.SetUpDataGridView(dataSource);
             this.SetUpForm();
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // DataViewForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "DataViewForm";
+            this.Load += new System.EventHandler(this.DataViewForm_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        private void DataViewForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
