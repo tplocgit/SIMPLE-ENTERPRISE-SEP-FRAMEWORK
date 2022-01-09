@@ -65,7 +65,7 @@ namespace SEPFramework
 
 
 
-            IoCContainer.SetDependency<FactoryFormVertical, FactoryFormVertical>();
+            
 
 
 
@@ -73,7 +73,8 @@ namespace SEPFramework
             //-----------------------------Get list of available database on this PC--------------------------
             Database databases = new Database();
             List<string> list = databases.GetDatabaseList();
-            
+            SelectDatabaseForm sldb = new SelectDatabaseForm("SelectDatabase", list);
+            Application.Run(sldb);
             /*
             foreach (var i in list)
             {
@@ -82,11 +83,8 @@ namespace SEPFramework
             */
 
             //-----------------------------Connect to a selected database---------------------------
-            string selected_database = list[list.Count - 1];
-            SingletonDatabase singletonDatabase = SingletonDatabase.getInstance();
-            singletonDatabase.connString = $@"Data Source=.;Initial Catalog={selected_database};Integrated Security=SSPI";
-
-            Application.Run(IoCContainer.GetDependency<FactoryFormVertical>().CreateLoginForm("Login form"));
+            //string selected_database = list[list.Count - 1];
+            
 
             /*
             //-----------------------------Get list of tables in selected database-------------------------------------------
@@ -97,34 +95,33 @@ namespace SEPFramework
                 Console.WriteLine(i);
             }
             */
-            /*
-            SqlServerDAO sqlServerDAO = new SqlServerDAO(singletonDatabase.connString);
+            
+            //SqlServerDAO sqlServerDAO = new SqlServerDAO(singletonDatabase.connString);
             
 
-            List<string> data = sqlServerDAO.GetAllFieldsName("OFFICER");
-            foreach (string item in data)
-            {
-                Console.Write(item+"\t");
-            }
-            Console.WriteLine();
-            DataTable dataTable = sqlServerDAO.GetAllData("OFFICER");
-            foreach (DataRow dataRow in dataTable.Rows)
-            {
-                //int count = 0;
-                foreach (var item in dataRow.ItemArray)
-                {
+            //List<string> data = sqlServerDAO.GetAllFieldsName("OFFICER");
+            //foreach (string item in data)
+            //{
+            //    Console.Write(item+"\t");
+            //}
+            //Console.WriteLine();
+            //DataTable dataTable = sqlServerDAO.GetAllData("OFFICER");
+            //foreach (DataRow dataRow in dataTable.Rows)
+            //{
+            //    //int count = 0;
+            //    foreach (var item in dataRow.ItemArray)
+            //    {
 
-                    //Console.Write(item + $"-{count}-type:{item.GetType()}\t");
-                    //count++;
-                    if (item.GetType() == typeof(System.DBNull))
-                        Console.Write("<NULL>\t");
-                    else
-                        Console.Write(item + "\t");
+            //        //Console.Write(item + $"-{count}-type:{item.GetType()}\t");
+            //        //count++;
+            //        if (item.GetType() == typeof(System.DBNull))
+            //            Console.Write("<NULL>\t");
+            //        else
+            //            Console.Write(item + "\t");
 
-                }
-                Console.WriteLine();
-            }
-            */
+            //    }
+            //    Console.WriteLine();
+            //}
         }
     }
 }
