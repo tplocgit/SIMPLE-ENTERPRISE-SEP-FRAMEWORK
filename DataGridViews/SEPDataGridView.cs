@@ -23,7 +23,8 @@ namespace SEPFramework.DataGridViews
             Name = "dataGridView";
             AutoSize = true;
             //InitColumns();
-            //InitRows();
+            //InitRows();'
+
         }
 
         public SEPDataGridView(string name, DataTable data) : this(data: data)
