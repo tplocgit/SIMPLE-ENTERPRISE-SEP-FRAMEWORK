@@ -68,23 +68,27 @@ namespace SEPFramework
             IoCContainer.SetDependency<FactoryFormVertical, FactoryFormVertical>();
 
 
-            Application.Run(IoCContainer.GetDependency<FactoryFormVertical>().CreateLoginForm("Login form"));
 
-            /*
+            
             //-----------------------------Get list of available database on this PC--------------------------
             Database databases = new Database();
             List<string> list = databases.GetDatabaseList();
+            
+            /*
             foreach (var i in list)
             {
                 Console.WriteLine(i);
             }
-
+            */
 
             //-----------------------------Connect to a selected database---------------------------
             string selected_database = list[list.Count - 1];
             SingletonDatabase singletonDatabase = SingletonDatabase.getInstance();
             singletonDatabase.connString = $@"Data Source=.;Initial Catalog={selected_database};Integrated Security=SSPI";
 
+            Application.Run(IoCContainer.GetDependency<FactoryFormVertical>().CreateLoginForm("Login form"));
+
+            /*
             //-----------------------------Get list of tables in selected database-------------------------------------------
             Console.WriteLine($"------------------- {selected_database}  database table ------------------------"); 
             List<string> tables = singletonDatabase.GetAllTablesName();

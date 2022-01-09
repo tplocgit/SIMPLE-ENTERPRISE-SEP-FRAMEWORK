@@ -8,6 +8,8 @@ using System.Windows.Forms;
 using SEPFramework.Factories;
 using SEPFramework.Buttons;
 using System.Diagnostics;
+using SEPFramework.DAO.MemberShip;
+using SEPFramework.DAO;
 
 namespace SEPFramework.Forms
 {
@@ -30,12 +32,43 @@ namespace SEPFramework.Forms
 
         private void OnClickLogin(object sender, EventArgs args)
         {
-            Debug.WriteLine("Login");
+            Debug.WriteLine("Login..."); 
+            Membership p = new Membership(SingletonDatabase.getInstance().connString);
+            if(p.Login(username.Value, password.Value))
+            {
+                MessageBox.Show("Login success");
+                SingletonDatabase singletonDatabase = SingletonDatabase.getInstance();
+                List<string> tables = singletonDatabase.GetAllTablesName();
+                foreach (var i in tables)
+                {
+                    Debug.WriteLine(i);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Login failed");
+            }
         }
 
         private void OnClickRegister(object sender, EventArgs args)
         {
-            Debug.WriteLine("Register");
+            Debug.WriteLine("Registering...");
+            Membership p = new Membership(SingletonDatabase.getInstance().connString);
+            if(p.Register(username.Value, password.Value))
+            {
+                MessageBox.Show("Register success");
+
+                SingletonDatabase singletonDatabase = SingletonDatabase.getInstance();
+                List<string> tables = singletonDatabase.GetAllTablesName();
+                foreach (var i in tables)
+                {
+                    Debug.WriteLine(i);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Register failed");
+            }
         }
     }
 }
