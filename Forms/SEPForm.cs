@@ -77,6 +77,8 @@ namespace SEPFramework.Forms
 
         private void SetUpButtons()
         {
+            if (this._panelButtons == null) return;
+
             this._panelButtons.Width = (int) (MathF.Min(t_defaultDockSideWidthPercent * this.Width, 150f + t_defaultMargin / 2));
         }
 
