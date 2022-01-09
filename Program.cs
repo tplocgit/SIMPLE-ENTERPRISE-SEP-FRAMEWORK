@@ -83,8 +83,7 @@ namespace SEPFramework
             }
             */
 
-            //-----------------------------Connect to a selected database---------------------------
-            //string selected_database = list[list.Count - 1];
+           
 
 
             /*

@@ -10,6 +10,8 @@ using SEPFramework.Buttons;
 using System.Diagnostics;
 using SEPFramework.DAO.MemberShip;
 using SEPFramework.DAO;
+using SEPFramework.DAO.DB;
+using System.Data;
 
 namespace SEPFramework.Forms
 {
@@ -39,9 +41,35 @@ namespace SEPFramework.Forms
                 MessageBox.Show("Login success");
                 SingletonDatabase singletonDatabase = SingletonDatabase.getInstance();
                 List<string> tables = singletonDatabase.GetAllTablesName();
-                foreach (var i in tables)
+                //foreach (var i in tables)
+                //{
+                //    Debug.WriteLine(i);
+                //}
+                //-----------------Read data of all table in database------
+                SqlServerDAO sqlServerDAO = new SqlServerDAO(singletonDatabase.connString);
+
+                List<string> data = sqlServerDAO.GetAllFieldsName(tables[0]);
+                foreach (string item in data)
                 {
-                    Debug.WriteLine(i);
+                    Debug.Write(item + "\t");
+                }
+                Debug.WriteLine("");
+                DataTable dataTable = sqlServerDAO.GetAllData(tables[0]);
+                foreach (DataRow dataRow in dataTable.Rows)
+                {
+                    //int count = 0;
+                    foreach (var item in dataRow.ItemArray)
+                    {
+
+                        //Debug.Write(item + $"-{count}-type:{item.GetType()}\t");
+                        //count++;
+                        if (item.GetType() == typeof(System.DBNull))
+                            Debug.Write("<NULL>\t");
+                        else
+                            Debug.Write(item + "\t");
+
+                    }
+                    Debug.WriteLine("");
                 }
             }
             else
@@ -60,9 +88,36 @@ namespace SEPFramework.Forms
 
                 SingletonDatabase singletonDatabase = SingletonDatabase.getInstance();
                 List<string> tables = singletonDatabase.GetAllTablesName();
-                foreach (var i in tables)
+                //foreach (var i in tables)
+                //{
+                //    Debug.WriteLine(i);
+                //}
+
+                //-----------------Read data of all table in database------
+                SqlServerDAO sqlServerDAO = new SqlServerDAO(singletonDatabase.connString);
+
+                List<string> data = sqlServerDAO.GetAllFieldsName(tables[0]);
+                foreach (string item in data)
                 {
-                    Debug.WriteLine(i);
+                    Debug.Write(item + "\t");
+                }
+                Debug.WriteLine("");
+                DataTable dataTable = sqlServerDAO.GetAllData(tables[0]);
+                foreach (DataRow dataRow in dataTable.Rows)
+                {
+                    //int count = 0;
+                    foreach (var item in dataRow.ItemArray)
+                    {
+
+                        //Debug.Write(item + $"-{count}-type:{item.GetType()}\t");
+                        //count++;
+                        if (item.GetType() == typeof(System.DBNull))
+                            Debug.Write("<NULL>\t");
+                        else
+                            Debug.Write(item + "\t");
+
+                    }
+                    Debug.WriteLine("");
                 }
             }
             else

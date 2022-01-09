@@ -28,6 +28,7 @@ namespace SEPFramework.Forms
                 {
                     IoCContainer.SetDependency<FactoryFormVertical, FactoryFormVertical>();
                     Debug.WriteLine($"Selected: {cb.SelectedItem} at Index = {cb.SelectedIndex}");
+                    //-----------------------------Connect to a selected database---------------------------
                     SingletonDatabase singletonDatabase = SingletonDatabase.getInstance();
                     singletonDatabase.connString = $@"Data Source=.;Initial Catalog={cb.SelectedItem};Integrated Security=SSPI";
                     this.Hide();
