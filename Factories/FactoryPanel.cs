@@ -30,7 +30,7 @@ namespace SEPFramework.Factories
         }
 
 
-        public Panel CreatePanelDataGridView(string panelName, List<Dictionary<string, string>> data)
+        public Panel CreatePanelDataGridView(string panelName, DataTable data)
         {
             Panel panel = new();
             panel.Dock = DockStyle.Fill;
