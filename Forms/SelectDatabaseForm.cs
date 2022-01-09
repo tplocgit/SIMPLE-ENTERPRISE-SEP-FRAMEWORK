@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SEPFramework.Buttons;
+using SEPFramework.Factories;
 
 namespace SEPFramework.Forms
 {
@@ -26,6 +27,11 @@ namespace SEPFramework.Forms
                     Debug.WriteLine($"Selected: {cb.SelectedItem} at Index = {cb.SelectedIndex}");
                 }
             );
+
+            FactoryPanel factoryPanel = new();
+            List<SEPButton> listBtn = new();
+            listBtn.Add(btnConn);
+            this._panelButtons = factoryPanel.CreateFLPanelDockBottomButtons("btnPanel", listBtn);
 
             this.SetUpForm();
         }
