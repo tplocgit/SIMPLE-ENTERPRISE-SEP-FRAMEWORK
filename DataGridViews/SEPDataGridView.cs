@@ -5,33 +5,33 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Data;
 
 namespace SEPFramework.DataGridViews
 {
     public class SEPDataGridView: DataGridView
     {
-        private List<Dictionary<string, string>> _data;
         
         public SEPDataGridView()
         {
             InitDefault();
         }
 
-        public SEPDataGridView(List<Dictionary<string, string>> data) : this()
+        public SEPDataGridView(DataTable data) : this()
         {
-            this._data = data;
+            this.DataSource = data;
             Name = "dataGridView";
             AutoSize = true;
-            InitColumns();
-            InitRows();
+            //InitColumns();
+            //InitRows();
         }
 
-        public SEPDataGridView(string name, List<Dictionary<string, string>> data) : this(data: data)
+        public SEPDataGridView(string name, DataTable data) : this(data: data)
         {
             this.Name = name;
         }
 
-        public SEPDataGridView(string name, Point location, Size size, List<Dictionary<string, string>> data) 
+        public SEPDataGridView(string name, Point location, Size size, DataTable data) 
             : this(name: name, data: data)
         {
             Location = location;
@@ -53,26 +53,26 @@ namespace SEPFramework.DataGridViews
             AllowUserToAddRows = false;
         }
 
-        private void InitColumns()
-        {
-            if (_data == null || _data.Count <= 0) return;
+        //private void InitColumns()
+        //{
+        //    if (_data == null || _data.Rows[0].) return;
 
-            Dictionary<string, string>.KeyCollection columnNames = _data.First().Keys;
-            for(int i = 0; i < columnNames.Count; ++i)
-            {
-                string name = columnNames.ElementAt(i);
-                Columns.Add(columnName: name.Replace(" ", ""), headerText: name);
-            }
-        }
+        //    Dictionary<string, string>.KeyCollection columnNames = _data.First().Keys;
+        //    for(int i = 0; i < columnNames.Count; ++i)
+        //    {
+        //        string name = columnNames.ElementAt(i);
+        //        Columns.Add(columnName: name.Replace(" ", ""), headerText: name);
+        //    }
+        //}
 
-        private void InitRows()
-        {
-            foreach (Dictionary<string, string> rowData in this._data)
-            {
-                int rIndex = this.Rows.Add();
-                foreach (string key in rowData.Keys)
-                    this.Rows[rIndex].Cells[key].Value = rowData[key];
-            }
-        }
+        //private void InitRows()
+        //{
+        //    foreach (Dictionary<string, string> rowData in this._data)
+        //    {
+        //        int rIndex = this.Rows.Add();
+        //        foreach (string key in rowData.Keys)
+        //            this.Rows[rIndex].Cells[key].Value = rowData[key];
+        //    }
+        //}
     }
 }
