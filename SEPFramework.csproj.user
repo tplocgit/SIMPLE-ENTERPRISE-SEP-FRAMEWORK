@@ -7,7 +7,7 @@
     <Compile Update="DataGridViews\SEPDataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="Forms\DatagridviewForm.cs">
+    <Compile Update="Forms\DataViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\LoginForm.cs">

@@ -16,8 +16,10 @@ namespace SEPFramework.Forms
 {
     class DataViewForm : SEPForm
     {
-        private SqlServerDAO _sqlServerDao = new(SingletonDatabase.getInstance().connString);
-        private string _dbTableRef;
+        private readonly SqlServerDAO _sqlServerDao = new(SingletonDatabase.getInstance().connString);
+        private readonly string _dbTableRef;
+        private SEPDataGridView _dataGridView;
+
        private DataViewForm(string name, string tableLabel, string tableTitle) : base(name, tableTitle, SEPForm.Type.Main, tableLabel, new System.Drawing.Size(1000, 700))
         {
             SEPButton btnInsert = new("btnInsert", "Insert", (sender, agrs) =>
@@ -34,6 +36,7 @@ namespace SEPFramework.Forms
             SEPButton btnReload = new("btnReload", "Reload", (sender, agrs) =>
             {
                 Debug.WriteLine("Reload");
+                this._dataGridView.DataSource = this._sqlServerDao.GetAllData(this._dbTableRef);
             });
 
             FactoryPanel factoryPanel = new();
@@ -45,9 +48,9 @@ namespace SEPFramework.Forms
 
         private void SetUpDataGridView(DataTable dataSource)
         {
-            SEPDataGridView dataGridView = new("dgv", dataSource) { Dock = System.Windows.Forms.DockStyle.Fill };
+            this._dataGridView = new("dgv", dataSource) { Dock = System.Windows.Forms.DockStyle.Fill };
             this._panelMain = new System.Windows.Forms.Panel();
-            this._panelMain.Controls.Add(dataGridView);
+            this._panelMain.Controls.Add(this._dataGridView);
         }
 
         public DataViewForm(string name, string tableLabel, string tableTitle, string dataTableName) : this(name, tableTitle, tableLabel)
