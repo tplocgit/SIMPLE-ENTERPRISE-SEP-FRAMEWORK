@@ -69,6 +69,7 @@ namespace SEPFramework.Forms
             {
                 MessageBox.Show("Register failed");
             }
+            
         }
     }
 }
