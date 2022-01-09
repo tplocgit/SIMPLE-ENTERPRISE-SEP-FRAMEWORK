@@ -40,15 +40,17 @@ namespace SEPFramework.Forms
 
         public RecordViewForm(string name, string tableLabel, string tableTitle, SaveType type, DataGridViewRow row) : this(name, tableLabel, tableTitle, type)
         {
-            DataGridViewRow headers = row.DataGridView.Rows[0];
-            Dictionary<string, string> fields = Enumerable
-                .Range(0, headers.Cells.Count)
-                .ToDictionary(i => headers.Cells[i].Value.ToString(), i => type == SaveType.Update ? row.Cells[i].Value.ToString() : "");
-
+            List<FormControl> fields = new();
+            foreach(DataGridViewColumn col in row.DataGridView.Columns)
+            {
+                string label = col.HeaderText;
+                string value = row.Cells[col.Index].Value.ToString();
+                fields.Add(new(label, value));
+            }
             FactoryPanel factoryPanel = new();
 
             this._panelMain = factoryPanel
-                .CreateTLPabelDockFillFormControls("rowPanel", FormControl.CreateFormControlList(fields));
+                .CreateTLPabelDockFillFormControls("rowPanel", fields);
 
             this.SetUpForm();
         }
