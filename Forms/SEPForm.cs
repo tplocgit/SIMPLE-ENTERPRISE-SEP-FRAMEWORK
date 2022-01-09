@@ -38,13 +38,13 @@ namespace SEPFramework.Forms
         // This panel contains buttons
         protected Panel _panelButtons = new();
 
-        public SEPForm()
+        private SEPForm()
         {
             InitializeComponent();
             MinimumSize = t_minSize;
         }
 
-        public SEPForm(string name, string titleText, Type type, string text, Size size) : this()
+        protected SEPForm(string name, string titleText, Type type, string text, Size size) : this()
         {
             _type = type;
             _titleText = titleText;
@@ -52,6 +52,7 @@ namespace SEPFramework.Forms
             Size = size;
             Name = name;
         }
+
         public SEPForm(string name, string titleText, Type type, string text,
             Size size, Panel flPanelButtons, Panel panelContent) : this(name, titleText, type, text, size)
         {
@@ -70,6 +71,7 @@ namespace SEPFramework.Forms
 
         private void SetUpLayouts()
         {
+            this.Controls.Clear();
             this.Controls.AddRange(new Control[] { this._panelMain, this._panelButtons, this._labelTitle});
         }
 

@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SEPFramework.Buttons.ButtonDelete">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Buttons\ButtonDelete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Buttons.ButtonInsert">
+    <Position X="3" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Buttons\ButtonInsert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Buttons.ButtonLogin">
+    <Position X="5.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Buttons\ButtonLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Buttons.ButtonRegister">
+    <Position X="7.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Buttons\ButtonRegister.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Buttons.ButtonSave">
+    <Position X="9.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Buttons\ButtonSave.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Buttons.SEPButton">
+    <Position X="5.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Buttons\SEPButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.DataGridViews.SEPDataGridView">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>DataGridViews\SEPDataGridView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Factories.FactoryButton" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAEAAAAAAAAQAAACAAAAAAAAAA=</HashCode>
+      <FileName>Factories\FactoryButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Factories.FactoryButtonDelete" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\FactoryButtonDelete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Factories.FactoryButtonInsert" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\FactoryButtonInsert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Factories.FactoryButtonLogin" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\FactoryButtonLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Factories.FactoryButtonRegister" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\FactoryButtonRegister.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Factories.FactoryButtonSave" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\FactoryButtonSave.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Factories.FactoryForm">
+    <Position X="2" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAgAAAAAAAAgAAAAAACAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Factories\FactoryForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Factories.FactoryFormHorizontal">
+    <Position X="3.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAgAAAAAACAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Factories\FactoryFormHorizontal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Factories.FactoryFormVertical">
+    <Position X="0.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAgAAAAAACAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Factories\FactoryFormVertical.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Factories.FactoryPanel">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIAAAAAAAAAEAEAAAAAAAgEAAgAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Factories\FactoryPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Factories.FactoryTextBoxForm">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\FactoryTextBoxForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.FormControls.FormControl">
+    <Position X="14" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAABAAAAACAEAAAAAAAAEgAIAAAAA=</HashCode>
+      <FileName>FormControls\FormControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Forms.SEPForm">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="SEPFramework.Forms.SEPForm.Type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Forms\SEPForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\SEPForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Program">
+    <Position X="12.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

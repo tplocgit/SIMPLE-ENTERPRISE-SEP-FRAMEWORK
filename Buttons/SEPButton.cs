@@ -8,30 +8,25 @@ using System.Drawing;
 
 namespace SEPFramework.Buttons
 {
-    public abstract class SEPButton : Button
+    public class SEPButton : Button
     {
-        protected SEPButton()
+        public SEPButton()
         {
             TabIndex = 0;
             UseVisualStyleBackColor = true;
             AutoSize = true;
             MinimumSize = new Size(150, 40);
-            Click += OnClick;
         }
 
-        protected SEPButton(string name, string text) : this()
+        public SEPButton(string name, string text) : this()
         {
             Name = name;
             Text = text;
         }
 
-        protected SEPButton(string name, string text, Size size, Point location) : this(name: name, text: text)
+        public SEPButton(string name, string text, EventHandler eh) : this(name, text)
         {
-            Size = size;
-            Location = location;
+            Click += eh;
         }
-
-
-        protected abstract void OnClick(object sender, EventArgs e);
     }
 }
