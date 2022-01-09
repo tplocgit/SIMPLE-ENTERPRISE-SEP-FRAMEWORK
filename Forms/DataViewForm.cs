@@ -25,7 +25,8 @@ namespace SEPFramework.Forms
             SEPButton btnInsert = new("btnInsert", "Insert", (sender, agrs) =>
             {
                 Debug.WriteLine("Insert");
-
+                SEPForm insertForm = new RecordViewForm("Insert row", "Insert row", "Edit your new line to insert", RecordViewForm.SaveType.Insert, this._dataGridView.Rows[0]);
+                insertForm.Show();
             });
 
             SEPButton btnDelete = new("btnDelete", "Delete", (sender, agrs) =>

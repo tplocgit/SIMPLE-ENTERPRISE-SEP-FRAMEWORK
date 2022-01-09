@@ -17,6 +17,7 @@ namespace SEPFramework.Forms
         }
 
         SaveType _sType;
+        List<FormControl> _fields = new();
 
         private RecordViewForm(string name, string tableLabel, string tableTitle, SaveType type) : base(name, tableTitle, SEPForm.Type.Main, tableLabel, new System.Drawing.Size(500, 500))
         {
@@ -24,7 +25,10 @@ namespace SEPFramework.Forms
             SEPButton btnInsert = new("btnInsert", "Insert", (sender, agrs) =>
             {
                 Debug.WriteLine("Save");
-
+                foreach(FormControl i in _fields)
+                {
+                    Debug.WriteLine(i.Value);
+                }
             });
 
             SEPButton btnCancel = new("btnDelete", "Delete", (sender, agrs) =>
@@ -40,17 +44,16 @@ namespace SEPFramework.Forms
 
         public RecordViewForm(string name, string tableLabel, string tableTitle, SaveType type, DataGridViewRow row) : this(name, tableLabel, tableTitle, type)
         {
-            List<FormControl> fields = new();
             foreach(DataGridViewColumn col in row.DataGridView.Columns)
             {
                 string label = col.HeaderText;
                 string value = row.Cells[col.Index].Value.ToString();
-                fields.Add(new(label, value));
+                _fields.Add(new(label, value));
             }
             FactoryPanel factoryPanel = new();
 
             this._panelMain = factoryPanel
-                .CreateTLPabelDockFillFormControls("rowPanel", fields);
+                .CreateTLPabelDockFillFormControls("rowPanel", _fields);
 
             this.SetUpForm();
         }

@@ -19,7 +19,7 @@ namespace SEPFramework.Factories
             //List<SEPButton> buttons = new() { buttonLogin, buttonRegister };
             //FactoryPanel factoryPanel = new();
 
-            //Dictionary<string, string> fields = new()
+            //Dictionary<string, string> _fields = new()
             //{
             //    ["Username:"] = "",
             //    ["Password:"] = ""
@@ -33,7 +33,7 @@ namespace SEPFramework.Factories
             //    text: "Login Form",
             //    size: new(width: 500, height: 300),
             //    flPanelButtons: factoryPanel.CreateFLPanelDockBottomButtons("panelButtons", buttons),
-            //    panelContent: factoryPanel.CreateTLPabelDockFillFormControls("panelTextboxs", fields)
+            //    panelContent: factoryPanel.CreateTLPabelDockFillFormControls("panelTextboxs", _fields)
             //)
             //{ MaximumSize = new(width: 500, height: 300) };
             return new LoginForm("A KKK");
@@ -50,7 +50,7 @@ namespace SEPFramework.Factories
             //List<SEPButton> buttons = new() { buttonLogin, buttonRegister };
             //FactoryPanel factoryPanel = new();
 
-            //Dictionary<string, string> fields = new()
+            //Dictionary<string, string> _fields = new()
             //{
             //    ["Username:"] = "",
             //    ["Password:"] = ""
@@ -64,7 +64,7 @@ namespace SEPFramework.Factories
             //    text: "Register Form",
             //    size: new(width: 500, height: 300),
             //    flPanelButtons: factoryPanel.CreateFLPanelDockBottomButtons("panelButtons", buttons),
-            //    panelContent: factoryPanel.CreateTLPabelDockFillFormControls("panelTextboxs", fields)
+            //    panelContent: factoryPanel.CreateTLPabelDockFillFormControls("panelTextboxs", _fields)
             //)
             //{ MaximumSize = new(width: 500, height: 300) };
             return null;
@@ -98,7 +98,7 @@ namespace SEPFramework.Factories
         public override SEPForm CreateInputForm(string name, string title, Dictionary<string, string> fields)
         {
             //FactoryPanel factoryPanel = new();
-            //Panel panelTb = factoryPanel.CreateTLPabelDockFillFormControls("panelTb", fields);
+            //Panel panelTb = factoryPanel.CreateTLPabelDockFillFormControls("panelTb", _fields);
             //FactoryButton factoryButton = new FactoryButtonSave();
             //SEPButton buttonSave = factoryButton.CreateButton("btnSave");
 
