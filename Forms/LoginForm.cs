@@ -53,9 +53,8 @@ namespace SEPFramework.Forms
                 //    Debug.Write(item + "\t");
                 //}
                 //Debug.WriteLine("");
-                SqlServerDAO sqlServerDAO = new SqlServerDAO(singletonDatabase.connString);
-                DataTable dataTable = sqlServerDAO.GetAllData(tables[0]);
-                DataViewForm dataGVF = new DataViewForm(tables[0], "label", "title", tables[0]);
+                
+                SEPForm dataGVF = new DataViewForm(tables[0], tables[0], tables[0], tables[0]);
                 dataGVF.Show();
                 //foreach (DataRow dataRow in dataTable.Rows)
                 //{

@@ -20,7 +20,7 @@ namespace SEPFramework.Forms
         private readonly string _dbTableRef;
         private SEPDataGridView _dataGridView;
 
-       private DataViewForm(string name, string tableLabel, string tableTitle) : base(name, tableTitle, SEPForm.Type.Main, tableLabel, new System.Drawing.Size(1000, 700))
+        private DataViewForm(string name, string tableLabel, string tableTitle) : base(name, tableTitle, SEPForm.Type.Main, tableLabel, new System.Drawing.Size(1000, 700))
         {
             SEPButton btnInsert = new("btnInsert", "Insert", (sender, agrs) =>
             {
@@ -43,7 +43,7 @@ namespace SEPFramework.Forms
 
             this._panelButtons = factoryPanel.CreateFLPanelDockRightButtons("btnPanel", new List<SEPButton> { btnInsert, btnDelete, btnReload });
 
-            this.SetUpForm();
+
         }
 
         private void SetUpDataGridView(DataTable dataSource)

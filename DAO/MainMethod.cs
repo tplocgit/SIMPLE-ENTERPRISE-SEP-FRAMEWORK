@@ -23,7 +23,7 @@ namespace SEPFramework.DAO
 
             SqlServerDAO sqlServerDAO = new SqlServerDAO(singletonDatabase.connString);
             *//*Dictionary<string, object> fields = new Dictionary<string, object>();
-            fields.Add("BienSo", "123-123");
+            "BienSo", "123-123")fields.Add(;
             fields.Add("HieuXe", "Yamahehehe");
             fields.Add("SoCho", 10);*//*
             //sqlServerDAO.Update(fields, "Xe");
