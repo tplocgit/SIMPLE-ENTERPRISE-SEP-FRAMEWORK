@@ -43,7 +43,7 @@ namespace SEPFramework.Forms
             DataGridViewRow headers = row.DataGridView.Rows[0];
             Dictionary<string, string> fields = Enumerable
                 .Range(0, headers.Cells.Count)
-                .ToDictionary(i => headers.Cells[i].ToString(), i => type == SaveType.Update ? row.Cells[i].ToString() : "");
+                .ToDictionary(i => headers.Cells[i].Value.ToString(), i => type == SaveType.Update ? row.Cells[i].Value.ToString() : "");
 
             FactoryPanel factoryPanel = new();
 
