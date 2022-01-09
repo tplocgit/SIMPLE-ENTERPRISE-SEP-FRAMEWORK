@@ -65,15 +65,16 @@ namespace SEPFramework
 
 
 
-            
 
 
 
-            
+
+
             //-----------------------------Get list of available database on this PC--------------------------
             Database databases = new Database();
             List<string> list = databases.GetDatabaseList();
             SelectDatabaseForm sldb = new SelectDatabaseForm("SelectDatabase", list);
+            //SelectDatabaseForm sldb = new SelectDatabaseForm("SelectDatabase", new List<string>{ "a", "b"});
             Application.Run(sldb);
             /*
             foreach (var i in list)
@@ -84,7 +85,7 @@ namespace SEPFramework
 
             //-----------------------------Connect to a selected database---------------------------
             //string selected_database = list[list.Count - 1];
-            
+
 
             /*
             //-----------------------------Get list of tables in selected database-------------------------------------------
@@ -95,9 +96,9 @@ namespace SEPFramework
                 Console.WriteLine(i);
             }
             */
-            
+
             //SqlServerDAO sqlServerDAO = new SqlServerDAO(singletonDatabase.connString);
-            
+
 
             //List<string> data = sqlServerDAO.GetAllFieldsName("OFFICER");
             //foreach (string item in data)

@@ -17,8 +17,9 @@ namespace SEPFramework.Forms
     {
         public SelectDatabaseForm(string name, List<string> databaseNames) : base(name, "Select Databases", SEPForm.Type.Main, "Login Form", new(width: 500, height: 300))
         {
-            this._panelMain = new FlowLayoutPanel();
-            ComboBox cb = new();
+            this._panelMain = new Panel();
+            ComboBox cb = new() { Dock = DockStyle.Fill };
+            cb.Font = new(System.Drawing.FontFamily.GenericMonospace, 14);
             cb.Items.AddRange(databaseNames.ToArray());
             SEPButton btnConn = new
             (
@@ -32,9 +33,15 @@ namespace SEPFramework.Forms
                     this.Hide();
                     IoCContainer.GetDependency<FactoryFormVertical>().CreateLoginForm("Login form").Show();
                 }
-            );
+            )
+            { Dock = DockStyle.Top };
 
-            this._panelMain.Controls.AddRange(new Control[2]{ cb, btnConn });
+            this._panelMain.Controls.Add(cb);
+
+            Panel btnPanel = new() { Dock = DockStyle.Right, Padding = new(5, 0, 5, 0) };
+            this._panelButtons = btnPanel;
+            btnPanel.Controls.Add(btnConn);
+            
 
             this.SetUpForm();
         }

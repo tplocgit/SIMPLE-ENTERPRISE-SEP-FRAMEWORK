@@ -15,7 +15,7 @@ namespace SEPFramework.Buttons
             TabIndex = 0;
             UseVisualStyleBackColor = true;
             AutoSize = true;
-            MinimumSize = new Size(150, 40);
+            //MinimumSize = new Size(150, 40);
         }
 
         public SEPButton(string name, string text) : this()
