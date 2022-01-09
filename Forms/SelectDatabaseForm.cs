@@ -10,6 +10,7 @@ using SEPFramework.DAO;
 using SEPFramework.DI;
 using SEPFramework.Factories;
 using SEPFramework.Forms;
+
 namespace SEPFramework.Forms
 {
     class SelectDatabaseForm : SEPForm
@@ -34,6 +35,11 @@ namespace SEPFramework.Forms
                     //IoCContainer.GetDependency<FactoryFormVertical>().CreateLoginForm("Login form").Show();
                 }
             );
+
+            FactoryPanel factoryPanel = new();
+            List<SEPButton> listBtn = new();
+            listBtn.Add(btnConn);
+            this._panelButtons = factoryPanel.CreateFLPanelDockBottomButtons("btnPanel", listBtn);
 
             this.SetUpForm();
         }
