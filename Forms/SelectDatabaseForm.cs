@@ -6,7 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SEPFramework.Buttons;
+using SEPFramework.DAO;
+using SEPFramework.DI;
 using SEPFramework.Factories;
+using SEPFramework.Forms;
 
 namespace SEPFramework.Forms
 {
@@ -22,7 +25,12 @@ namespace SEPFramework.Forms
                 "btnConn", "Connect",
                 (sender, agrs) =>
                 {
+                    IoCContainer.SetDependency<FactoryFormVertical, FactoryFormVertical>();
                     Debug.WriteLine($"Selected: {cb.SelectedItem} at Index = {cb.SelectedIndex}");
+                    SingletonDatabase singletonDatabase = SingletonDatabase.getInstance();
+                    singletonDatabase.connString = $@"Data Source=.;Initial Catalog={cb.SelectedItem};Integrated Security=SSPI";
+                    this.Hide();
+                    IoCContainer.GetDependency<FactoryFormVertical>().CreateLoginForm("Login form").Show();
                 }
             );
 
