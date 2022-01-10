@@ -77,14 +77,14 @@ namespace SEPFramework.DataGridViews
         //    }
         //}
 
-        public Dictionary<string, string> rowData(int rowIndex)
+        public Dictionary<string, object> RowDataToDict(int rowIndex)
         {
             return this.Rows[rowIndex]
                 .Cells
                 .Cast<DataGridViewCell>()
-                .Aggregate(new Dictionary<string, string>(), (acc, item) => 
+                .Aggregate(new Dictionary<string, object>(), (acc, item) => 
                 {
-                    acc[Columns[item.ColumnIndex].HeaderText] = item.Value.ToString();
+                    acc[Columns[item.ColumnIndex].HeaderText] = item.Value;
                     return acc;
                 });
         } 

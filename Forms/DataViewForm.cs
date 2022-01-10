@@ -47,7 +47,7 @@ namespace SEPFramework.Forms
                 }
                 foreach(DataGridViewRow row in rowColection)
                 {
-                    Debug.WriteLine(string.Join(Environment.NewLine, this._dataGridView.rowData(row.Index)));
+                    Debug.WriteLine(string.Join(Environment.NewLine, this._dataGridView.RowDataToDict(row.Index)));
                 }
             });
 

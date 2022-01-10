@@ -21,26 +21,36 @@ namespace SEPFramework.Forms
         SaveType _sType;
         List<FormControl> _fields = new();
         SqlServerDAO sqlServerDAO = new SqlServerDAO(SingletonDatabase.getInstance().connString);
+        string _tableName = "";
 
         private RecordViewForm(string name, string tableLabel, string tableTitle, SaveType type) : base(name, tableTitle, SEPForm.Type.Main, tableLabel, new System.Drawing.Size(500, 500))
         {
             this._sType = type;
-            SEPButton btnInsert = new("btnInsert", "Insert", (sender, agrs) =>
+            SEPButton btnInsert = new("btnSave", "btnSave", (sender, agrs) =>
             {
                 Debug.WriteLine("Save");
-                Dictionary<string, object> insertDict = new Dictionary<string, object>();
+                Dictionary<string, object> insertDict = this.GetFormDataAsDict();
                 foreach (FormControl i in _fields)
                 {
                     Debug.WriteLine(i.LabelText + ": " + i.Value);
-                    insertDict.Add(i.LabelText, i.Value);
                 }
-                
-                sqlServerDAO.Insert(insertDict, name);
+                if(this._sType == SaveType.Insert)
+                {
+                    // Insert Action here
+                    Debug.WriteLine("Insert");
+                    sqlServerDAO.Insert(insertDict, this._tableName);
+                }
+                else if(this._sType == SaveType.Update)
+                {
+                    // Update action here
+                    Debug.WriteLine("Update");
+                }
             });
 
-            SEPButton btnCancel = new("btnDelete", "Delete", (sender, agrs) =>
+            SEPButton btnCancel = new("btnCancel", "Cancel", (sender, agrs) =>
              {
                  Debug.WriteLine("Cancel");
+                 this.Hide();
              });
 
 
@@ -63,6 +73,17 @@ namespace SEPFramework.Forms
                 .CreateTLPabelDockFillFormControls("rowPanel", _fields);
 
             this.SetUpForm();
+        }
+
+        public Dictionary<string, object> GetFormDataAsDict()
+        {
+            return this
+                ._fields
+                .Aggregate(new Dictionary<string, object>(), (acc, curr) =>
+                {
+                    acc[curr.LabelText] = curr.Value;
+                    return acc;
+                });
         }
     }
 }
