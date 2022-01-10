@@ -19,6 +19,7 @@ namespace SEPFramework.Forms
     {
         private FormControl username = new("Username", "");
         private FormControl password = new("Password", "", '*');
+        
         public LoginForm(string name) : base (name, "Login Form", SEPForm.Type.Main, "Login Form", new(width: 500, height: 300))
         {
             FactoryPanel factoryPanel = new();
@@ -31,7 +32,10 @@ namespace SEPFramework.Forms
             this._panelMain = factoryPanel.CreateTLPabelDockFillFormControls("main", fc);
             this.SetUpForm();
         }
+        public LoginForm() : this("Login")
+        {
 
+        }
         private void OnClickLogin(object sender, EventArgs args)
         {
             Debug.WriteLine("Login..."); 
@@ -41,21 +45,14 @@ namespace SEPFramework.Forms
                 MessageBox.Show("Login success");
                 SingletonDatabase singletonDatabase = SingletonDatabase.getInstance();
                 List<string> tables = singletonDatabase.GetAllTablesName();
-                //foreach (var i in tables)
-                //{
-                //    Debug.WriteLine(i);
-                //}
+
                 //-----------------Read data of all table in database------
 
-                //List<string> data = sqlServerDAO.GetAllFieldsName(tables[0]);
-                //foreach (string item in data)
-                //{
-                //    Debug.Write(item + "\t");
-                //}
-                //Debug.WriteLine("");
-                
-                SEPForm dataGVF = new DataViewForm(tables[1], tables[1], tables[1], tables[1]);
-                dataGVF.Show();
+                foreach (string name in tables)
+                {
+                    SEPForm dataGVF = new DataViewForm(name, name, name, name);
+                    dataGVF.Show();
+                }
                 //foreach (DataRow dataRow in dataTable.Rows)
                 //{
                 //    //int count = 0;
