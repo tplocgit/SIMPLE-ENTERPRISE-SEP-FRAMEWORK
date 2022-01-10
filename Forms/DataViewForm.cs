@@ -40,7 +40,7 @@ namespace SEPFramework.Forms
                 // Get first row this._dataGridView.SelectedRows[0] if this._dataGridView.SelectedRows.Count > 0
 
                 DataGridViewSelectedRowCollection rowColection = this._dataGridView.SelectedRows;
-                if (rowColection.Count < 0)
+                if (rowColection.Count <= 0)
                 {
                     // No row selected here
                     return;
@@ -57,9 +57,21 @@ namespace SEPFramework.Forms
                 this._dataGridView.DataSource = this._sqlServerDao.GetAllData(this._dbTableRef);
             });
 
+            SEPButton btnUpdate = new("btnUpdate", "btnUpdate", (sender, agrs) =>
+            {
+                Debug.WriteLine("Update");
+                DataGridViewSelectedRowCollection selectedRows = this._dataGridView.SelectedRows;
+                if(selectedRows.Count <= 0)
+                {
+                    return;
+                }
+                RecordViewForm rvf = new("rvf", "Update", "Update", this._dbTableRef, RecordViewForm.SaveType.Update, selectedRows[0]);
+                rvf.Show();
+            });
+
             FactoryPanel factoryPanel = new();
 
-            this._panelButtons = factoryPanel.CreateFLPanelDockRightButtons("btnPanel", new List<SEPButton> { btnInsert, btnDelete, btnReload });
+            this._panelButtons = factoryPanel.CreateFLPanelDockRightButtons("btnPanel", new List<SEPButton> { btnInsert, btnUpdate, btnDelete, btnReload });
         }
 
         private void SetUpDataGridView(DataTable dataSource)
@@ -104,7 +116,6 @@ namespace SEPFramework.Forms
             this.Name = "DataViewForm";
             this.Load += new System.EventHandler(this.DataViewForm_Load);
             this.ResumeLayout(false);
-
         }
 
         private void DataViewForm_Load(object sender, EventArgs e)

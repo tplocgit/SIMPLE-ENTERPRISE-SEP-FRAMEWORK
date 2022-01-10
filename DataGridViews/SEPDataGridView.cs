@@ -24,6 +24,7 @@ namespace SEPFramework.DataGridViews
             AutoSize = true;
             SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             EditMode = DataGridViewEditMode.EditOnF2;
+            ReadOnly = false;
         }
         public SEPDataGridView(string name, DataTable data) : this(data: data)
         {
@@ -31,7 +32,7 @@ namespace SEPFramework.DataGridViews
         }
         public SEPDataGridView(string name, DataTable data, DataGridViewCellEventHandler onCellDoubleClicked) : this(name:name, data: data)
         {
-            this.CellDoubleClick += onCellDoubleClicked;
+            this.CellContentDoubleClick += onCellDoubleClicked;
         }
 
         public SEPDataGridView(string name, Point location, Size size, DataTable data) 

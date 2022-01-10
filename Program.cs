@@ -66,14 +66,14 @@ namespace SEPFramework
 
 
 
-            Application.Run(new DataViewForm("", "", "", ""));
+            //Application.Run(new DataViewForm("", "", "", ""));
 
 
 
             //-----------------------------Get list of available database on this PC--------------------------
-            //Database databases = new Database();
-            //List<string> list = databases.GetDatabaseList();
-            //SelectDatabaseForm sldb = new SelectDatabaseForm("SelectDatabase", list);
+            Database databases = new Database();
+            List<string> list = databases.GetDatabaseList();
+            SelectDatabaseForm sldb = new SelectDatabaseForm("SelectDatabase", list);
             ////SelectDatabaseForm sldb = new SelectDatabaseForm("SelectDatabase", new List<string>{ "a", "b"});
             //Application.Run(sldb);
             /*
@@ -83,7 +83,7 @@ namespace SEPFramework
             }
             */
 
-           
+
 
 
             /*
