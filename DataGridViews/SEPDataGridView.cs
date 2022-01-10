@@ -76,5 +76,20 @@ namespace SEPFramework.DataGridViews
         //            this.Rows[rIndex].Cells[key].Value = rowData[key];
         //    }
         //}
+
+        public Dictionary<string, string> rowData(int rowIndex)
+        {
+            return this.Rows[rowIndex]
+                .Cells
+                .Cast<DataGridViewCell>()
+                .Select(item => new Dictionary<string, string>()
+                {
+                    {
+                        this._dataGridView.Columns[item.ColumnIndex].HeaderText,
+                        item.Value.ToString()
+                    }
+                })
+                .ToList();
+        } 
     }
 }

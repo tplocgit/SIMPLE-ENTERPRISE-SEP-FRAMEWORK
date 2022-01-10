@@ -39,20 +39,16 @@ namespace SEPFramework.Forms
                 // Get Selected Column by this._dataGridView.SelectedColumns
                 // Get first row this._dataGridView.SelectedRows[0] if this._dataGridView.SelectedRows.Count > 0
 
-                DataGridViewSelectedRowCollection rowColecction = this._dataGridView.SelectedRows;
-                DataGridViewRow selectedFirstRow = rowColecction.Count > 0 ? rowColecction[0] : null;
-                List<Dictionary<string, string>> data = selectedFirstRow
-                                                            .Cells
-                                                            .Cast<DataGridViewCell>()
-                                                            .Select(item => new Dictionary<string, string>()
-                                                            {
-                                                                {
-                                                                    this._dataGridView.Columns[item.ColumnIndex].HeaderText,
-                                                                    item.Value.ToString()
-                                                                }
-                                                            })
-                                                            .ToList();
-                Debug.WriteLine();
+                DataGridViewSelectedRowCollection rowColection = this._dataGridView.SelectedRows;
+                if (rowColection.Count < 0)
+                {
+                    // No row selected here
+                    return;
+                }
+                foreach(DataGridViewRow row in rowColection)
+                {
+                    Debug.WriteLine(string.Join(Environment.NewLine, this._dataGridView.rowData(row.Index)));
+                }
             });
 
             SEPButton btnReload = new("btnReload", "Reload", (sender, agrs) =>
