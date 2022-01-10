@@ -104,7 +104,7 @@ namespace SEPFramework.Forms
                 MessageBox.Show("Error: No row selected");
             }
             DataGridViewRow selectedFirstRow = selectedRowCollection[0];
-            new RecordViewForm("rvf", "Record", "Record", this._dbTableRef, RecordViewForm.SaveType.Update, selectedFirstRow);
+            new RecordViewForm("rvf", "Record", "Record", this._dbTableRef, RecordViewForm.SaveType.Update, selectedFirstRow).Show();
         }
 
         private void InitializeComponent()

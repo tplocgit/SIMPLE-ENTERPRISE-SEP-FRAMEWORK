@@ -26,6 +26,7 @@ namespace SEPFramework.DataGridViews
             EditMode = DataGridViewEditMode.EditOnF2;
             ReadOnly = false;
         }
+
         public SEPDataGridView(string name, DataTable data) : this(data: data)
         {
             this.Name = name;
