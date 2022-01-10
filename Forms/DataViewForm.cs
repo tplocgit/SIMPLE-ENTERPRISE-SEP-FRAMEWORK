@@ -42,16 +42,15 @@ namespace SEPFramework.Forms
             FactoryPanel factoryPanel = new();
 
             this._panelButtons = factoryPanel.CreateFLPanelDockRightButtons("btnPanel", new List<SEPButton> { btnInsert, btnDelete, btnReload });
-            //this._dataGridView.CellDoubleClick += (sender, agrs) =>
-            //{
-            //    Debug.WriteLine(agrs.RowIndex);
-            //    Debug.WriteLine(this._dataGridView.Rows[agrs.RowIndex]);
-            //};
         }
 
         private void SetUpDataGridView(DataTable dataSource)
         {
-            this._dataGridView = new("dgv", dataSource) { Dock = System.Windows.Forms.DockStyle.Fill };
+            this._dataGridView = new("dgv", dataSource, (sender, e) =>
+            {
+                Debug.WriteLine(e.RowIndex);
+                Debug.WriteLine(this._dataGridView.Rows[e.RowIndex]);
+            }) { Dock = System.Windows.Forms.DockStyle.Fill };
             this._panelMain = new System.Windows.Forms.Panel();
             this._panelMain.Controls.Add(this._dataGridView);
         }

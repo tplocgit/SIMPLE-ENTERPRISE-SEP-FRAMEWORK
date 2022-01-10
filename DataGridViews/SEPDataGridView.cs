@@ -22,14 +22,14 @@ namespace SEPFramework.DataGridViews
             this.DataSource = data;
             Name = "dataGridView";
             AutoSize = true;
-            //InitColumns();
-            //InitRows();'
-
         }
-
         public SEPDataGridView(string name, DataTable data) : this(data: data)
         {
             this.Name = name;
+        }
+        public SEPDataGridView(string name, DataTable data, DataGridViewCellEventHandler onCellDoubleClicked) : this(name:name, data: data)
+        {
+            this.CellDoubleClick += onCellDoubleClicked;
         }
 
         public SEPDataGridView(string name, Point location, Size size, DataTable data) 
