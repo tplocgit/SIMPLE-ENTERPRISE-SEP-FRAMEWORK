@@ -72,13 +72,26 @@ namespace SEPFramework
 
 
             //-----------------------------Get list of available database on this PC--------------------------
+            //DataTable dt = new DataTable();
+            //dt.Columns.Add("12");
+            //dt.Columns.Add("123");
+            //dt.Columns.Add("1244");
+            //DataRow a = dt.NewRow();
+            //a.ItemArray = new string[3] { "!", "2", "3" };
+            //DataRow b = dt.NewRow();
+            //b.ItemArray = new string[3] { "QW", "QWEqw", "qweqw" };
+            //dt.Rows.Add(a);
+            //dt.Rows.Add(b);
+
+            //Application.Run(new DataViewForm("A", "A", "a", dt));
+
             Database databases = new Database();
             List<string> list = databases.GetDatabaseList();
             SelectDatabaseForm sldb = new SelectDatabaseForm("SelectDatabase", list);
-            ////SelectDatabaseForm sldb = new SelectDatabaseForm("SelectDatabase", new List<string>{ "a", "b"});
-            //Application.Run(sldb);
-            //SelectDatabaseForm sldb = new SelectDatabaseForm("SelectDatabase", new List<string>{ "a", "b"});
             Application.Run(sldb);
+            //SelectDatabaseForm sldb = new SelectDatabaseForm("SelectDatabase", new List<string>{ "a", "b"});
+            //SelectDatabaseForm sldb = new SelectDatabaseForm("SelectDatabase", new List<string>{ "a", "b"});
+            //Application.Run(sldb);
             /*
             foreach (var i in list)
             {

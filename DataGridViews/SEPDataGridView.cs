@@ -31,9 +31,9 @@ namespace SEPFramework.DataGridViews
         {
             this.Name = name;
         }
-        public SEPDataGridView(string name, DataTable data, DataGridViewCellEventHandler onCellDoubleClicked) : this(name:name, data: data)
+        public SEPDataGridView(string name, DataTable data, DataGridViewCellMouseEventHandler onCellDoubleClicked) : this(name:name, data: data)
         {
-            this.CellContentDoubleClick += onCellDoubleClicked;
+            this.CellMouseDoubleClick += onCellDoubleClicked;
         }
 
         public SEPDataGridView(string name, Point location, Size size, DataTable data) 

@@ -93,7 +93,14 @@ namespace SEPFramework.Forms
             this.SetUpForm();
         }
 
-        private void OnCellDoubleClicked(object sender, DataGridViewCellEventArgs e)
+        public DataViewForm(string name, string tableLabel, string tableTitle, DataTable dt) : this(name, tableTitle, tableLabel)
+        {
+            DataTable dataSource = dt;
+            this.SetUpDataGridView(dataSource);
+            this.SetUpForm();
+        }
+
+        private void OnCellDoubleClicked(object sender, DataGridViewCellMouseEventArgs e)
         {
             // Double click cell event here 
             Debug.WriteLine(e.RowIndex);
