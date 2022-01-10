@@ -23,10 +23,11 @@ namespace SEPFramework.Forms
         SqlServerDAO sqlServerDAO = new SqlServerDAO(SingletonDatabase.getInstance().connString);
         string _tableName = "";
 
-        private RecordViewForm(string name, string tableLabel, string tableTitle, SaveType type) : base(name, tableTitle, SEPForm.Type.Main, tableLabel, new System.Drawing.Size(500, 500))
+        private RecordViewForm(string name, string tableLabel, string tableTitle, SaveType type, string tableName) : base(name, tableTitle, SEPForm.Type.Main, tableLabel, new System.Drawing.Size(500, 500))
         {
+            this._tableName = tableName;
             this._sType = type;
-            SEPButton btnInsert = new("btnSave", "btnSave", (sender, agrs) =>
+            SEPButton btnInsert = new("btnSave", "Save", (sender, agrs) =>
             {
                 Debug.WriteLine("Save");
                 Dictionary<string, object> insertDict = this.GetFormDataAsDict();
@@ -59,7 +60,7 @@ namespace SEPFramework.Forms
             this._panelButtons = factoryPanel.CreateFLPanelDockRightButtons("btnPanel", new List<SEPButton> { btnInsert, btnCancel });
         }
 
-        public RecordViewForm(string name, string tableLabel, string tableTitle, SaveType type, DataGridViewRow row) : this(name, tableLabel, tableTitle, type)
+        public RecordViewForm(string name, string tableLabel, string tableTitle, string tableName, SaveType type, DataGridViewRow row) : this(name, tableLabel, tableTitle, type, tableName)
         {
             foreach (DataGridViewColumn col in row.DataGridView.Columns)
             {

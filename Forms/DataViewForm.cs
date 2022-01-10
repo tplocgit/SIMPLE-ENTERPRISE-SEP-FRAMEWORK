@@ -26,7 +26,7 @@ namespace SEPFramework.Forms
             {
                 Debug.WriteLine("Insert");
                 //SEPForm insertForm = new RecordViewForm("Insert row", "Insert row", "Edit your new line to insert", RecordViewForm.SaveType.Insert, this._dataGridView.Rows[0]);
-                SEPForm insertForm = new RecordViewForm(name, tableLabel, tableTitle, RecordViewForm.SaveType.Insert, this._dataGridView.Rows[0]);
+                SEPForm insertForm = new RecordViewForm(name, tableLabel, tableTitle, this._dbTableRef, RecordViewForm.SaveType.Insert, this._dataGridView.Rows[0]);
                 insertForm.Show();
             });
 
