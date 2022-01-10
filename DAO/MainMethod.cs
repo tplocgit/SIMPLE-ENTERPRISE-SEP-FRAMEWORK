@@ -22,12 +22,12 @@ namespace SEPFramework.DAO
             List<string> tables = singletonDatabase.GetAllTablesName();
 
             SqlServerDAO sqlServerDAO = new SqlServerDAO(singletonDatabase.connString);
-            *//*Dictionary<string, object> fields = new Dictionary<string, object>();
-            "BienSo", "123-123")fields.Add(;
-            fields.Add("HieuXe", "Yamahehehe");
-            fields.Add("SoCho", 10);*//*
-            //sqlServerDAO.Update(fields, "Xe");
-            //sqlServerDAO.Insert(fields, "Xe");
+            *//*Dictionary<string, object> _fields = new Dictionary<string, object>();
+            _fields.Add("BienSo", "123-123");
+            _fields.Add("HieuXe", "Yamahehehe");
+            _fields.Add("SoCho", 10);*//*
+            //sqlServerDAO.Update(_fields, "Xe");
+            //sqlServerDAO.Insert(_fields, "Xe");
 
             DataTable dataTable = sqlServerDAO.GetAllData("Xe");
             foreach (DataRow dataRow in dataTable.Rows)
@@ -64,17 +64,18 @@ namespace SEPFramework.DAO
                 Console.WriteLine(sqlServerDAO.GetPrimaryKey());
             }*/
 
-            /* foreach (string table in tables)
-             {
-                 Console.WriteLine(table + "");
-                 SqlServerDAO sqlServerDAO = new SqlServerDAO(singletonDatabase.connString);
-                 Console.WriteLine(sqlServerDAO.GetPrimaryKey(table));
-             }*/
+        /* foreach (string table in tables)
+         {
+             Console.WriteLine(table + "");
+             SqlServerDAO sqlServerDAO = new SqlServerDAO(singletonDatabase.connString);
+             Console.WriteLine(sqlServerDAO.GetPrimaryKey(table));
+         }*/
 
-            /*Membership membership = new Membership(singletonDatabase.connString);
-            membership.Register("Long1", "123456");*//*
+        /*Membership membership = new Membership(singletonDatabase.connString);
+        membership.Register("Long1", "123456");*//*
 
-            Console.ReadKey();
-        }
-*/    }
+        Console.ReadKey();
+    }
+*/
+    }
 }

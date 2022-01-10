@@ -15,7 +15,7 @@ namespace SEPFramework.DAO.DB
         public abstract DataTable GetAllData(string tableName);
         //get primary key
         public abstract string GetPrimaryKey(string tableName);
-        //get all fields name
+        //get all _fields name
         public abstract List<string> GetAllFieldsName(string tableName);
         //insert
         public abstract bool Insert(Dictionary<string, object> data, string tableName);
