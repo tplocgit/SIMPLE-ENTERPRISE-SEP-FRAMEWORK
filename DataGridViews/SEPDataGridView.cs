@@ -23,6 +23,7 @@ namespace SEPFramework.DataGridViews
             Name = "dataGridView";
             AutoSize = true;
             SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            EditMode = DataGridViewEditMode.EditOnF2;
         }
         public SEPDataGridView(string name, DataTable data) : this(data: data)
         {

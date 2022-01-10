@@ -64,12 +64,9 @@ namespace SEPFramework.Forms
 
         private void SetUpDataGridView(DataTable dataSource)
         {
-            this._dataGridView = new(name: "dgv", data: dataSource, onCellDoubleClicked: (sender, e) =>
-            {   
-                // Double click cell event here 
-                Debug.WriteLine(e.RowIndex);
-                Debug.WriteLine(this._dataGridView.Rows[e.RowIndex]);
-            }) { Dock = System.Windows.Forms.DockStyle.Fill };
+            this._dataGridView = new
+                (name: "dgv", data: dataSource, onCellDoubleClicked: OnCellDoubleClicked) 
+                { Dock = DockStyle.Fill };
             this._panelMain = new System.Windows.Forms.Panel();
             this._panelMain.Controls.Add(this._dataGridView);
         }
@@ -80,6 +77,20 @@ namespace SEPFramework.Forms
             DataTable dataSource = _sqlServerDao.GetAllData(this._dbTableRef);
             this.SetUpDataGridView(dataSource);
             this.SetUpForm();
+        }
+
+        private void OnCellDoubleClicked(object sender, DataGridViewCellEventArgs e)
+        {
+            // Double click cell event here 
+            Debug.WriteLine(e.RowIndex);
+            Debug.WriteLine(this._dataGridView.Rows[e.RowIndex]);
+            DataGridViewSelectedRowCollection selectedRowCollection = this._dataGridView.SelectedRows;
+            if(selectedRowCollection.Count <= 0)
+            {
+                MessageBox.Show("Error: No row selected");
+            }
+            DataGridViewRow selectedFirstRow = selectedRowCollection[0];
+            new RecordViewForm("rvf", "Record", "Record", this._dbTableRef, RecordViewForm.SaveType.Update, selectedFirstRow);
         }
 
         private void InitializeComponent()

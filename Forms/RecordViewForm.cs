@@ -46,12 +46,13 @@ namespace SEPFramework.Forms
                     // Update action here
                     Debug.WriteLine("Update");
                 }
+                this.Dispose();
             });
 
             SEPButton btnCancel = new("btnCancel", "Cancel", (sender, agrs) =>
              {
                  Debug.WriteLine("Cancel");
-                 this.Hide();
+                 this.Dispose();
              });
 
 
@@ -65,7 +66,7 @@ namespace SEPFramework.Forms
             foreach (DataGridViewColumn col in row.DataGridView.Columns)
             {
                 string label = col.HeaderText;
-                string value = row.Cells[col.Index].Value.ToString();
+                string value = this._sType == SaveType.Insert ? row.Cells[col.Index].Value.ToString() : "";
                 _fields.Add(new(label, value));
             }
             FactoryPanel factoryPanel = new();
