@@ -82,14 +82,11 @@ namespace SEPFramework.DataGridViews
             return this.Rows[rowIndex]
                 .Cells
                 .Cast<DataGridViewCell>()
-                .Select(item => new Dictionary<string, string>()
+                .Aggregate(new Dictionary<string, string>(), (acc, item) => 
                 {
-                    {
-                        this._dataGridView.Columns[item.ColumnIndex].HeaderText,
-                        item.Value.ToString()
-                    }
-                })
-                .ToList();
+                    acc[Columns[item.ColumnIndex].HeaderText] = item.Value.ToString();
+                    return acc;
+                });
         } 
     }
 }
