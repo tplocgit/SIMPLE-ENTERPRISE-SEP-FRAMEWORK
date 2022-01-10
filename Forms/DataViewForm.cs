@@ -52,7 +52,7 @@ namespace SEPFramework.Forms
                                                                 }
                                                             })
                                                             .ToList();
-                Debug.WriteLine(data);
+                Debug.WriteLine();
             });
 
             SEPButton btnReload = new("btnReload", "Reload", (sender, agrs) =>
