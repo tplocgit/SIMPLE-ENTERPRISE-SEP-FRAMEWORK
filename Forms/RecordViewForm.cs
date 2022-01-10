@@ -45,6 +45,7 @@ namespace SEPFramework.Forms
                 {
                     // Update action here
                     Debug.WriteLine("Update");
+                    sqlServerDAO.Update(insertDict, this._tableName);
                 }
                 this.Dispose();
             });
