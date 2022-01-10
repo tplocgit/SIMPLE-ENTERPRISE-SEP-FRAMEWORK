@@ -49,7 +49,7 @@ namespace SEPFramework.Forms
                 foreach(DataGridViewRow row in rowColection)
                 {
                     Debug.WriteLine(string.Join(Environment.NewLine, this._dataGridView.RowDataToDict(row.Index)));
-                    _sqlServerDao.Delete(_dbTableRef, row.Cells[0].Value);
+                   _sqlServerDao.Delete(_dbTableRef, _dataGridView.RowDataToDict(row.Index));
                 }
             });
 

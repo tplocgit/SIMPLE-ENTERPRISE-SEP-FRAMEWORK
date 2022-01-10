@@ -21,6 +21,8 @@ namespace SEPFramework.DAO.DB
         public abstract bool Insert(Dictionary<string, object> data, string tableName);
         //delete
         public abstract bool Delete(string tableName, object valueOfPrimaryKey);
+        //delete2
+        public abstract bool Delete(string tableName, Dictionary<string, object> data);
         //update
         public abstract bool Update(Dictionary<string, object> data, string tableName);
         //create table to store accounts membership

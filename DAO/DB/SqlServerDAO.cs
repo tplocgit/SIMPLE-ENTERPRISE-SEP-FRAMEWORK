@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SEPFramework.DAO.DB
 {
-    class SqlServerDAO: DatabaseDAO
+    class SqlServerDAO : DatabaseDAO
     {
         //constructor
         public SqlServerDAO(string connection)
@@ -193,6 +194,38 @@ namespace SEPFramework.DAO.DB
             if (valueOfPrimaryKey.GetType() == typeof(string))
                 sql = $"delete from {tableName} where {primaryKey} = '{valueOfPrimaryKey}'";
             else sql = $"delete from {tableName} where {primaryKey} = {valueOfPrimaryKey}";
+            try
+            {
+                databaseProcessor.QueryData(sql);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return true;
+        }
+
+        public override bool Delete(string tableName, Dictionary<string, object> data)
+        {
+            string sql = "delete from " + tableName + " where ";
+            for (int i = 0; i < data.Count; i++)
+            {
+                if (i < data.Count - 1)
+                {
+                    if (data.Values.ElementAt(i).GetType() == typeof(string) || data.Values.ElementAt(i).GetType() == typeof(DateTime))
+                        sql += data.Keys.ElementAt(i).ToString() + " = '" + data.Values.ElementAt(i) + "' and ";
+                    else
+                        sql += data.Keys.ElementAt(i).ToString() + " = " + data.Values.ElementAt(i) + " and ";
+                }
+                else
+                {
+                    if (data.Values.ElementAt(i).GetType() == typeof(string))
+                        sql += data.Keys.ElementAt(i).ToString() + " = '" + data.Values.ElementAt(i) + "'";
+                    else
+                        sql += data.Keys.ElementAt(i).ToString() + " = " + data.Values.ElementAt(i);
+                }
+            }
+            Debug.WriteLine(sql);
             try
             {
                 databaseProcessor.QueryData(sql);
