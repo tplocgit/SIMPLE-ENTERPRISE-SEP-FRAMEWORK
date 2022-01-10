@@ -48,7 +48,7 @@ namespace SEPFramework.Forms
 
         private void SetUpDataGridView(DataTable dataSource)
         {
-            this._dataGridView = new("dgv", dataSource, (sender, e) =>
+            this._dataGridView = new(name: "dgv", data: dataSource, onCellDoubleClicked: (sender, e) =>
             {
                 Debug.WriteLine(e.RowIndex);
                 Debug.WriteLine(this._dataGridView.Rows[e.RowIndex]);
