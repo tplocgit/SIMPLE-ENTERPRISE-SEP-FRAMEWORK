@@ -19,7 +19,10 @@ namespace SEPFramework.Forms
     {
         private FormControl username = new("Username", "");
         private FormControl password = new("Password", "", '*');
-        
+        public LoginForm() : this("Login")
+        {
+
+        }
         public LoginForm(string name) : base (name, "Login Form", SEPForm.Type.Main, "Login Form", new(width: 500, height: 300))
         {
             FactoryPanel factoryPanel = new();
@@ -32,10 +35,7 @@ namespace SEPFramework.Forms
             this._panelMain = factoryPanel.CreateTLPabelDockFillFormControls("main", fc);
             this.SetUpForm();
         }
-        public LoginForm() : this("Login")
-        {
-
-        }
+        
         private void OnClickLogin(object sender, EventArgs args)
         {
             Debug.WriteLine("Login..."); 

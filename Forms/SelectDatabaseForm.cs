@@ -26,15 +26,14 @@ namespace SEPFramework.Forms
                 "btnConn", "Connect",
                 (sender, agrs) =>
                 {
-                    //IoCContainer.SetDependency<FactoryFormVertical, FactoryFormVertical>();
-                    LoginForm login = new();
+                    IoCContainer.SetDependency<LoginForm, LoginForm>();
                     Debug.WriteLine($"Selected: {cb.SelectedItem} at Index = {cb.SelectedIndex}");
                     //-----------------------------Connect to a selected database---------------------------
                     SingletonDatabase singletonDatabase = SingletonDatabase.getInstance();
                     singletonDatabase.connString = $@"Data Source=.;Initial Catalog={cb.SelectedItem};Integrated Security=SSPI";
                     this.Hide();
+                    LoginForm login = IoCContainer.GetDependency<LoginForm>();
                     login.Show();
-                    //IoCContainer.GetDependency<FactoryFormVertical>().CreateLoginForm("Login form").Show();
                 }
             )
             { Dock = DockStyle.Top };
