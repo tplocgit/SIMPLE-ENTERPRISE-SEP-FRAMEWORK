@@ -1,6 +1,7 @@
 ﻿using SEPFramework.Buttons;
 using SEPFramework.Forms;
 using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 
 
@@ -10,113 +11,102 @@ namespace SEPFramework.Factories
     {
         public override SEPForm CreateLoginForm(string name)
         {
-            //FactoryButton factoryButton = new FactoryButtonLogin();
-            //SEPButton buttonLogin = factoryButton.CreateButton("btnLogin");
+            SEPButton buttonLogin = new("btnLogin", "btnLogin");
 
-            //factoryButton = new FactoryButtonRegister();
-            //SEPButton buttonRegister = factoryButton.CreateButton("btnRegister");
+            SEPButton buttonRegister = new("btnRegister", "btnRegister");
 
-            //List<SEPButton> buttons = new() { buttonLogin, buttonRegister };
-            //FactoryPanel factoryPanel = new();
+            List<SEPButton> buttons = new() { buttonLogin, buttonRegister };
+            FactoryPanel factoryPanel = new();
 
-            //Dictionary<string, string> _fields = new()
-            //{
-            //    ["Username:"] = "",
-            //    ["Password:"] = ""
-            //};
+            Dictionary<string, string> _fields = new()
+            {
+                ["Username:"] = "",
+                ["Password:"] = ""
+            };
 
-            //return new SEPForm
-            //(
-            //    name: name,
-            //    titleText: "Login",
-            //    SEPForm.Type.Main,
-            //    text: "Login Form",
-            //    size: new(width: 500, height: 300),
-            //    flPanelButtons: factoryPanel.CreateFLPanelDockBottomButtons("panelButtons", buttons),
-            //    panelContent: factoryPanel.CreateTLPabelDockFillFormControls("panelTextboxs", _fields)
-            //)
-            //{ MaximumSize = new(width: 500, height: 300) };
-            return new LoginForm("A KKK");
+            return new SEPForm
+            (
+                name: name,
+                titleText: "Login",
+                SEPForm.Type.Main,
+                text: "Login Form",
+                size: new(width: 500, height: 300),
+                flPanelButtons: factoryPanel.CreateFLPanelDockBottomButtons("panelButtons", buttons),
+                panelContent: factoryPanel.CreateTLPabelDockFillFormControls("panelTextboxs", _fields)
+            )
+            { MaximumSize = new(width: 500, height: 300) };
         }
 
         public override SEPForm CreateRegisterForm(string name)
         {
-            //FactoryButton factoryButton = new FactoryButtonLogin();
-            //SEPButton buttonLogin = factoryButton.CreateButton("btnLogin");
+            SEPButton buttonLogin = new("btnLogin", "btnLogin");
 
-            //factoryButton = new FactoryButtonRegister();
-            //SEPButton buttonRegister = factoryButton.CreateButton("btnRegister");
+            SEPButton buttonRegister = new("btnRegister", "btnRegister");
 
-            //List<SEPButton> buttons = new() { buttonLogin, buttonRegister };
-            //FactoryPanel factoryPanel = new();
+            List<SEPButton> buttons = new() { buttonLogin, buttonRegister };
+            FactoryPanel factoryPanel = new();
 
-            //Dictionary<string, string> _fields = new()
-            //{
-            //    ["Username:"] = "",
-            //    ["Password:"] = ""
-            //};
+            Dictionary<string, string> _fields = new()
+            {
+                ["Username:"] = "",
+                ["Password:"] = ""
+            };
 
-            //return new SEPForm
-            //(
-            //    name: name,
-            //    titleText: "Register",
-            //    SEPForm.Type.Main,
-            //    text: "Register Form",
-            //    size: new(width: 500, height: 300),
-            //    flPanelButtons: factoryPanel.CreateFLPanelDockBottomButtons("panelButtons", buttons),
-            //    panelContent: factoryPanel.CreateTLPabelDockFillFormControls("panelTextboxs", _fields)
-            //)
-            //{ MaximumSize = new(width: 500, height: 300) };
-            return null;
+            return new SEPForm
+            (
+                name: name,
+                titleText: "Register",
+                SEPForm.Type.Main,
+                text: "Register Form",
+                size: new(width: 500, height: 300),
+                flPanelButtons: factoryPanel.CreateFLPanelDockBottomButtons("panelButtons", buttons),
+                panelContent: factoryPanel.CreateTLPabelDockFillFormControls("panelTextboxs", _fields)
+            )
+            { MaximumSize = new(width: 500, height: 300) };
         }
-        public override SEPForm CreateDataViewForm(string name, string title, List<Dictionary<string, string>> data)
+        public override SEPForm CreateDataViewForm(string name, string title, DataTable data)
         {
-            //FactoryPanel factoryPanel = new();
-            //Panel panelDgv = factoryPanel.CreatePanelDataGridView("panelDgv", data);
-            //FactoryButton factoryButton = new FactoryButtonInsert();
-            //SEPButton buttonInsert = factoryButton.CreateButton("btnInsert");
+            FactoryPanel factoryPanel = new();
+            Panel panelDgv = factoryPanel.CreatePanelDataGridView("panelDgv", data);
+            SEPButton buttonInsert = new("btnInsert", "btnInsert");
 
-            //factoryButton = new FactoryButtonDelete();
-            //SEPButton buttonDelete = factoryButton.CreateButton("btnDelete");
+            SEPButton buttonDelete = new("btnDelete", "btnDelete");
 
-            //List<SEPButton> buttons = new() { buttonInsert, buttonDelete };
+            List<SEPButton> buttons = new() { buttonInsert, buttonDelete };
 
-            //Panel paneButtons = factoryPanel.CreateFLPanelDockBottomButtons("pabelButtons", buttons);
+            Panel paneButtons = factoryPanel.CreateFLPanelDockBottomButtons("pabelButtons", buttons);
 
-            //return new
-            //(
-            //    name: name,
-            //    titleText: title,
-            //    SEPForm.Type.Main,
-            //    text: "Register Form",
-            //    size: new(width: 500, height: 500),
-            //    flPanelButtons: paneButtons,
-            //    panelContent: panelDgv
-            //);
-            return null;
+            return new
+            (
+                name: name,
+                titleText: title,
+                SEPForm.Type.Main,
+                text: "Register Form",
+                size: new(width: 500, height: 500),
+                flPanelButtons: paneButtons,
+                panelContent: panelDgv
+            );
         }
         public override SEPForm CreateInputForm(string name, string title, Dictionary<string, string> fields)
         {
-            //FactoryPanel factoryPanel = new();
-            //Panel panelTb = factoryPanel.CreateTLPabelDockFillFormControls("panelTb", _fields);
-            //FactoryButton factoryButton = new FactoryButtonSave();
-            //SEPButton buttonSave = factoryButton.CreateButton("btnSave");
+            FactoryPanel factoryPanel = new();
+            Panel panelTb = factoryPanel.CreateTLPabelDockFillFormControls("panelTb", fields);
+            SEPButton buttonSave = new("btnSave", "btnSave");
 
-            //List<SEPButton> buttons = new() { buttonSave };
+            List<SEPButton> buttons = new() { buttonSave };
 
-            //Panel paneButtons = factoryPanel.CreateFLPanelDockBottomButtons("pabelButtons", buttons);
+            Panel paneButtons = factoryPanel.CreateFLPanelDockBottomButtons("pabelButtons", buttons);
 
-            //return new
-            //(
-            //    name: name,
-            //    titleText: "Register",
-            //    SEPForm.Type.Main,
-            //    text: "Register Form",
-            //    size: new(width: 500, height: 500),
-            //    flPanelButtons: paneButtons,
-            //    panelContent: panelTb
-            //);
-            return null;
+            return new
+            (
+                name: name,
+                titleText: "Register",
+                SEPForm.Type.Main,
+                text: "Register Form",
+                size: new(width: 500, height: 500),
+                flPanelButtons: paneButtons,
+                panelContent: panelTb
+            );
         }
     }
 }

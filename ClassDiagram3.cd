@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SEPFramework.Buttons.SEPButton" Collapsed="true">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Buttons\SEPButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.DAO.DB.DatabaseDAO" Collapsed="true">
+    <Position X="2.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAGACAAAAAAAAAAIAAAAQAAMAAAAAACAAQAAAAAA=</HashCode>
+      <FileName>DAO\DB\DatabaseDAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.DAO.DB.DatabaseProcessor" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAIAAABAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAO\DB\DatabaseProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.DAO.DB.SqlServerDAO" Collapsed="true">
+    <Position X="2.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAGACAAAAAAAAAAIAAAAAAAMAEAAAACAAQAAAAAA=</HashCode>
+      <FileName>DAO\DB\SqlServerDAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.DAO.DB.SqlServerProcessor" Collapsed="true">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAIAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAO\DB\SqlServerProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.DAO.MemberShip.HashPassword" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAASAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAO\MemberShip\HashPassword.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.DAO.MemberShip.Membership" Collapsed="true">
+    <Position X="17.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAQAABAAAA=</HashCode>
+      <FileName>DAO\MemberShip\Membership.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.DAO.Database" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAO\Database.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.DAO.MainMethod" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAO\MainMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.DAO.SingletonDatabase" Collapsed="true">
+    <Position X="17.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAACBAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>DAO\SingletonDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.DataGridViews.SEPDataGridView" Collapsed="true">
+    <Position X="15.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAQAAA=</HashCode>
+      <FileName>DataGridViews\SEPDataGridView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.DI.IoCContainer" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAABAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DI\IoCContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Factories.FactoryForm" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAgAAAAAAAAgAAAAAACAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Factories\FactoryForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Factories.FactoryFormHorizontal" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAgAAAAAACAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Factories\FactoryFormHorizontal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Factories.FactoryFormVertical" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAgAAAAAACAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Factories\FactoryFormVertical.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Factories.FactoryPanel">
+    <Position X="10.25" Y="3.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>EIAAAAAAAAAEAEAAAAAAAgEAAgAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Factories\FactoryPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Factories.FactoryTextBoxForm" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\FactoryTextBoxForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.FormControls.FormControl" Collapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAQAABAAAAACAEAAAAAAAAEgAIAAAAA=</HashCode>
+      <FileName>FormControls\FormControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Forms.DataViewForm" Collapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAQAAAAAAAAAAAAAADAIAACAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Forms\DataViewForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Forms.LoginForm" Collapsed="true">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAECAAAAAAACAAAAAgAAQAA=</HashCode>
+      <FileName>Forms\LoginForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Forms.RecordViewForm" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAEAAAAAAAAAAACAAAAAAAAAAAIAAAAAAAAAAIA=</HashCode>
+      <FileName>Forms\RecordViewForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Forms.SelectDatabaseForm" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\SelectDatabaseForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Forms.SEPForm" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAACAABgQFAAKAAAACECAAAAACAQAgIAgAAAE=</HashCode>
+      <FileName>Forms\SEPForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEPFramework.Program" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
