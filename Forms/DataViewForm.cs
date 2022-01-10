@@ -35,6 +35,7 @@ namespace SEPFramework.Forms
                 // Delete evetn here
                 Debug.WriteLine("Delete");
 
+
                 // Get Selected Rows by this._dataGridView.SelectedRows
                 // Get Selected Column by this._dataGridView.SelectedColumns
                 // Get first row this._dataGridView.SelectedRows[0] if this._dataGridView.SelectedRows.Count > 0
@@ -48,6 +49,7 @@ namespace SEPFramework.Forms
                 foreach(DataGridViewRow row in rowColection)
                 {
                     Debug.WriteLine(string.Join(Environment.NewLine, this._dataGridView.RowDataToDict(row.Index)));
+                    _sqlServerDao.Delete(_dbTableRef, row.Cells[0].Value);
                 }
             });
 

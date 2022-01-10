@@ -70,12 +70,15 @@ namespace SEPFramework
 
 
 
+
             //-----------------------------Get list of available database on this PC--------------------------
             Database databases = new Database();
             List<string> list = databases.GetDatabaseList();
             SelectDatabaseForm sldb = new SelectDatabaseForm("SelectDatabase", list);
             ////SelectDatabaseForm sldb = new SelectDatabaseForm("SelectDatabase", new List<string>{ "a", "b"});
             //Application.Run(sldb);
+            //SelectDatabaseForm sldb = new SelectDatabaseForm("SelectDatabase", new List<string>{ "a", "b"});
+            Application.Run(sldb);
             /*
             foreach (var i in list)
             {
