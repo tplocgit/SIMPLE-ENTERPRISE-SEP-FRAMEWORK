@@ -10,7 +10,7 @@ using System.Diagnostics;
 using SEPFramework.Factories;
 using SEPFramework.DAO.DB;
 using SEPFramework.DAO;
-
+using System.Windows.Forms;
 
 namespace SEPFramework.Forms
 {
@@ -32,7 +32,27 @@ namespace SEPFramework.Forms
 
             SEPButton btnDelete = new("btnDelete", "Delete", (sender, agrs) =>
             {
+                // Delete evetn here
                 Debug.WriteLine("Delete");
+
+                // Get Selected Rows by this._dataGridView.SelectedRows
+                // Get Selected Column by this._dataGridView.SelectedColumns
+                // Get first row this._dataGridView.SelectedRows[0] if this._dataGridView.SelectedRows.Count > 0
+
+                DataGridViewSelectedRowCollection rowColecction = this._dataGridView.SelectedRows;
+                DataGridViewRow selectedFirstRow = rowColecction.Count > 0 ? rowColecction[0] : null;
+                List<Dictionary<string, string>> data = selectedFirstRow
+                                                            .Cells
+                                                            .Cast<DataGridViewCell>()
+                                                            .Select(item => new Dictionary<string, string>()
+                                                            {
+                                                                {
+                                                                    this._dataGridView.Columns[item.ColumnIndex].HeaderText,
+                                                                    item.Value.ToString()
+                                                                }
+                                                            })
+                                                            .ToList();
+                Debug.WriteLine(data);
             });
 
             SEPButton btnReload = new("btnReload", "Reload", (sender, agrs) =>
@@ -49,7 +69,8 @@ namespace SEPFramework.Forms
         private void SetUpDataGridView(DataTable dataSource)
         {
             this._dataGridView = new(name: "dgv", data: dataSource, onCellDoubleClicked: (sender, e) =>
-            {
+            {   
+                // Double click cell event here 
                 Debug.WriteLine(e.RowIndex);
                 Debug.WriteLine(this._dataGridView.Rows[e.RowIndex]);
             }) { Dock = System.Windows.Forms.DockStyle.Fill };
